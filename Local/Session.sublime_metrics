@@ -1,0 +1,29 @@
+{
+	"licensed": false,
+	"packages":
+	[
+		"ApacheConf.tmLanguage",
+		"cdnjs",
+		"EditorConfig",
+		"Emmet",
+		"GitGutter",
+		"HTML5",
+		"JavaScript Patterns",
+		"JsFormat",
+		"LESS",
+		"Markdown Preview",
+		"Nettuts+ Fetch",
+		"Package Control",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"TrailingSpaces"
+	],
+	"startup_sec": 0.1760888,
+	"syntax":
+	{
+		"Markdown": 45
+	},
+	"time": 1403557179
+}
