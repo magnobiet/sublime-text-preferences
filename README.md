@@ -1,10 +1,11 @@
 # Sublime Text 3
 
-[Syncing](https://sublime.wbond.net/docs/syncing)
+* [Download](http://www.sublimetext.com/3)
+* [Packages](https://sublime.wbond.net/)
 
-# Install on Windows
+## Install on Windows
 
-![Windows](Images/install-windows.gif)
+![Windows](https://bytebucket.org/maqinainternet/sublime-text/raw/9c95a9a26783c224b5b388506e6803c05c71b69d/Images/install-windows.gif?token=7f2a6d3e530fe0782050ae0687cffc4bd91d93b4)
 
 Open PowerShell by right-clicking and selecting Run as administrator
 
