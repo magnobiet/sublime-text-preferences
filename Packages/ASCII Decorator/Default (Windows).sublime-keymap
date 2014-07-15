@@ -1,0 +1,5 @@
+    [
+        {
+            "keys": ["alt+shift+k"], "command": "figlet_default"
+        }
+    ]
