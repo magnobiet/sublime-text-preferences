@@ -5,6 +5,7 @@
 		"Autoprefixer",
 		"Bower",
 		"cdnjs",
+		"DocBlockr",
 		"EditorConfig",
 		"Emmet",
 		"GitGutter",
