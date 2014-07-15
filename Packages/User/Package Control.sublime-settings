@@ -6,6 +6,7 @@
 		"Autoprefixer",
 		"Bower",
 		"cdnjs",
+		"CSScomb JS",
 		"DocBlockr",
 		"EditorConfig",
 		"Emmet",
