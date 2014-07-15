@@ -3,10 +3,12 @@
 	[
 		"ApacheConf.tmLanguage",
 		"Autoprefixer",
+		"Bower",
 		"cdnjs",
 		"EditorConfig",
 		"Emmet",
 		"GitGutter",
+		"Grunt",
 		"HTML5",
 		"JavaScript Patterns",
 		"JsFormat",
