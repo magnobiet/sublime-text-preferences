@@ -19,6 +19,7 @@
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"TrailingSpaces",
+		"Trimmer",
 		"YUI Compressor"
 	]
 }

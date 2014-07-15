@@ -1,5 +1,7 @@
 /Index/*
 /Installed Packages/PyV8
 /Packages/PyV8
-*.cache
 /Backup/
+*.cache
+*.last-run
+*.sublime_session
