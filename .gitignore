@@ -2,3 +2,4 @@
 /Installed Packages/PyV8
 /Packages/PyV8
 *.cache
+/Backup/
