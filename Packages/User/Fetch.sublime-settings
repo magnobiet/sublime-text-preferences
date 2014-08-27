@@ -10,8 +10,8 @@
 		"head.js 1.0.3 (Responsive Design + Feature Detections)": "http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js",
 		"jQuery 1.11.1": "http://code.jquery.com/jquery-1.11.1.min.js",
 		"jQuery 2.1.1": "http://code.jquery.com/jquery-2.1.1.min.js",
-		"jQuery Migrate 1.2.1": "//code.jquery.com/jquery-migrate-1.2.1.min.js",
-		"jQuery Boilerplate": "https://raw.githubusercontent.com/jquery-boilerplate/jquery-boilerplate/master/dist/jquery.boilerplate.js"
+		"jQuery Boilerplate": "https://raw.githubusercontent.com/jquery-boilerplate/jquery-boilerplate/master/dist/jquery.boilerplate.js",
+		"jQuery Migrate 1.2.1": "//code.jquery.com/jquery-migrate-1.2.1.min.js"
 	},
 	"packages":
 	{

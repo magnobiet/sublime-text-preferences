@@ -18,6 +18,7 @@
 
     /*! other */
     { "keys": ["ctrl+alt+t"],   "command": "insert_snippet", "args": { "contents": "<${1:p}>${0:$SELECTION}</${1}>" } },
-    { "keys": ["ctrl+shift+e"], "command": "html_entitize" }
+    { "keys": ["ctrl+shift+e"], "command": "html_entitize" },
+    { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"}
 
 ]

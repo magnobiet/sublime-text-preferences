@@ -13,6 +13,11 @@
 	[
 		"Vintage"
 	],
+	"index_exclude_patterns":
+	[
+		"D:\\htdocs\\_framework\\assets\\stylesheets\\manager\\_scss*",
+		"*.log"
+	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"match_adjacent_only": true,

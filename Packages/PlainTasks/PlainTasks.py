@@ -6,6 +6,7 @@ import re
 import sublime
 import sublime_plugin
 import webbrowser
+import itertools
 from datetime import datetime
 if int(sublime.version()) < 3000:
     import locale
@@ -41,10 +42,10 @@ class PlainTasksBase(sublime_plugin.TextCommand):
 
 class PlainTasksNewCommand(PlainTasksBase):
     def runCommand(self, edit):
-        selections = list(self.view.sel()) # for ST3 support
-        selections.reverse() # because with multiple selections regions would be messed up after first iteration
-        for region in selections:
-            line = self.view.line(region)
+        # list for ST3 support;
+        # reversed because with multiple selections regions would be messed up after first iteration
+        regions = itertools.chain(*(reversed(self.view.lines(region)) for region in reversed(list(self.view.sel()))))
+        for line in regions:
             line_contents = self.view.substr(line).rstrip()
             not_empty_line = re.match('^(\s*)(\S.+)$', self.view.substr(line))
             empty_line     = re.match('^(\s+)$', self.view.substr(line))
@@ -92,11 +93,19 @@ class PlainTasksCompleteCommand(PlainTasksBase):
             done_line_end = ' %s%s%s' % (self.done_tag, self.before_date_space, datetime.now().strftime(self.date_format))
         offset = len(done_line_end)
         rom = r'^(\s*)(\[\s\]|.)(\s*.*)$'
-        rdm = r'^(\s*)(\[x\]|.)(\s*[^\b]*?\s*)(?=\s@done|@project|\s\(|$).*$'
-        rcm = r'^(\s*)(\[\-\]|.)(\s*[^\b]*?\s*)(?=\s@cancelled|@project|\s\(|$).*$'
+        rdm = r'''
+            (?x)^(\s*)(\[x\]|.)                           # 0,1 indent & bullet
+            (\s*[^\b]*?(?:[^\@]|(?<!\s)\@|\@(?=\s))*?\s*) #   2 very task
+            (?=
+              ((?:\s@done|@project|$).*)              # 3 ending either w/ done or w/o it & no date
+              |                                       #   or
+              (?:(\([^()]*\))\s*([^@]*|@project.*))?$ # 4 date & possible project tag after
+            )
+            '''  # rcm is the same, except bullet & ending
+        rcm = r'^(\s*)(\[\-\]|.)(\s*[^\b]*?(?:[^\@]|(?<!\s)\@|\@(?=\s))*?\s*)(?=((?:\s@cancelled|@project|$).*)|(?:(\([^()]*\))\s*([^@]*|@project.*))?$)'
         started = r'^\s*[^\b]*?\s*@started(\([\d\w,\.:\-\/ @]*\)).*$'
-        for region in self.view.sel():
-            line = self.view.line(region)
+        regions = itertools.chain(*(reversed(self.view.lines(region)) for region in reversed(list(self.view.sel()))))
+        for line in regions:
             line_contents = self.view.substr(line).rstrip()
             open_matches = re.match(rom, line_contents, re.U)
             done_matches = re.match(rdm, line_contents, re.U)
@@ -119,13 +128,15 @@ class PlainTasksCompleteCommand(PlainTasksBase):
                 self.view.insert(edit, line.begin() + len(indent.group(1)), '%s ' % self.done_tasks_bullet)
             elif 'completed' in current_scope:
                 grps = done_matches.groups()
-                replacement = u'%s%s%s' % (grps[0], self.open_tasks_bullet, grps[2].rstrip())
+                parentheses = self.check_parentheses(self, grps[4] or '')
+                replacement = u'%s%s%s%s' % (grps[0], self.open_tasks_bullet, grps[2], parentheses)
                 self.view.replace(edit, line, replacement)
                 offset = -offset
             elif 'cancelled' in current_scope:
                 grps = canc_matches.groups()
                 self.view.insert(edit, line.end(), done_line_end)
-                replacement = u'%s%s%s' % (grps[0], self.done_tasks_bullet, grps[2].rstrip())
+                parentheses = self.check_parentheses(self, grps[4] or '')
+                replacement = u'%s%s%s%s' % (grps[0], self.done_tasks_bullet, grps[2], parentheses)
                 self.view.replace(edit, line, replacement)
                 offset = -offset
         self.view.sel().clear()
@@ -143,6 +154,14 @@ class PlainTasksCompleteCommand(PlainTasksBase):
             delta = delta[:~2]
         self.view.insert(edit, line.end() + eol, ' @%s(%s)' % (tag, delta))
 
+    @staticmethod
+    def check_parentheses(self, regex_group):
+        try:
+            parentheses = '' if datetime.strptime(regex_group.strip(), self.date_format) else regex_group
+        except ValueError:
+            parentheses = regex_group
+        return parentheses
+
 
 class PlainTasksCancelCommand(PlainTasksBase):
     def runCommand(self, edit):
@@ -153,11 +172,11 @@ class PlainTasksCancelCommand(PlainTasksBase):
             canc_line_end = ' %s%s%s' % (self.canc_tag,self.before_date_space, datetime.now().strftime(self.date_format))
         offset = len(canc_line_end)
         rom = r'^(\s*)(\[\s\]|.)(\s*.*)$'
-        rdm = r'^(\s*)(\[x\]|.)(\s*[^\b]*?\s*)(?=\s@done|@project|\s\(|$).*$'
-        rcm = r'^(\s*)(\[\-\]|.)(\s*[^\b]*?\s*)(?=\s@cancelled|@project|\s\(|$).*$'
+        rdm = r'^(\s*)(\[x\]|.)(\s*[^\b]*?(?:[^\@]|(?<!\s)\@|\@(?=\s))*?\s*)(?=((?:\s@done|@project|$).*)|(?:(\([^()]*\))\s*([^@]*|@project.*))?$)'
+        rcm = r'^(\s*)(\[\-\]|.)(\s*[^\b]*?(?:[^\@]|(?<!\s)\@|\@(?=\s))*?\s*)(?=((?:\s@cancelled|@project|$).*)|(?:(\([^()]*\))\s*([^@]*|@project.*))?$)'
         started = '^\s*[^\b]*?\s*@started(\([\d\w,\.:\-\/ @]*\)).*$'
-        for region in self.view.sel():
-            line = self.view.line(region)
+        regions = itertools.chain(*(reversed(self.view.lines(region)) for region in reversed(list(self.view.sel()))))
+        for line in regions:
             line_contents = self.view.substr(line).rstrip()
             open_matches = re.match(rom, line_contents, re.U)
             done_matches = re.match(rdm, line_contents, re.U)
@@ -181,12 +200,14 @@ class PlainTasksCancelCommand(PlainTasksBase):
             elif 'completed' in current_scope:
                 sublime.status_message('You cannot cancel what have been done, can you?')
                 # grps = done_matches.groups()
-                # replacement = u'%s%s%s' % (grps[0], self.canc_tasks_bullet, grps[2].rstrip())
+                # parentheses = PlainTasksCompleteCommand.check_parentheses(self, grps[4] or '')
+                # replacement = u'%s%s%s%s' % (grps[0], self.canc_tasks_bullet, grps[2], parentheses)
                 # self.view.replace(edit, line, replacement)
                 # offset = -offset
             elif 'cancelled' in current_scope:
                 grps = canc_matches.groups()
-                replacement = u'%s%s%s' % (grps[0], self.open_tasks_bullet, grps[2].rstrip())
+                parentheses = PlainTasksCompleteCommand.check_parentheses(self, grps[4] or '')
+                replacement = u'%s%s%s%s' % (grps[0], self.open_tasks_bullet, grps[2], parentheses)
                 self.view.replace(edit, line, replacement)
                 offset = -offset
         self.view.sel().clear()
