@@ -1,11 +1,15 @@
 {
 	"installed_packages":
 	[
+		"AngularJS",
 		"ApacheConf.tmLanguage",
 		"ASCII Decorator",
 		"AutoFileName",
 		"Autoprefixer",
 		"Bower",
+		"BracketHighlighter",
+		"BufferScroll",
+		"Can I Use",
 		"cdnjs",
 		"CSScomb JS",
 		"DocBlockr",
