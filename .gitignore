@@ -5,3 +5,4 @@
 *.cache
 *.last-run
 *.sublime_session
+BufferScroll.bin.gz
