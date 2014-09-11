@@ -15,3 +15,14 @@ git clone https://<username>@bitbucket.org/maqinainternet/sublime-text.git Data
 cd "$env:appdata\Sublime Text 3\Packages\"
 cmd /c mklink /D User "C:\Program Files\Sublime Text 3\Data"
 ```
+
+## Install on Ubuntu
+
+```
+cd $HOME/Downloads
+#wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_i386.deb
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_amd64.deb
+sudo dpkg -i sublime-text_build-*.deb
+cd $HOME/.config/
+git clone https://<username>@bitbucket.org/maqinainternet/sublime-text.git
+```
