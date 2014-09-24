@@ -9,6 +9,10 @@
 	"fallback_encoding": "ISO-8859-1",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"match_adjacent_only": true,
