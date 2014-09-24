@@ -1,0 +1,14 @@
+{
+	"name": "st3_plugins_dependencies",
+	"description": "Install Sublime Text 3 plugins dependencies",
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": {
+		"name": "Magno Biét",
+		"email": "me@magnobiet.com",
+		"url": "http://magnobiet.com/"
+	},
+	"scripts": {
+		"install": "npm install -g jshint jscs csslint && gem install scss-lint"
+	}
+}
