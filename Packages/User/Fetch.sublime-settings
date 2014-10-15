@@ -1,28 +1,10 @@
 {
 	"files":
 	{
-		"Modernizr 2.8.2": "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js",
-		"Normalize 3.0.1": "http://necolas.github.com/normalize.css/3.0.1/normalize.css",
-		"Require 2.1.14": "http://requirejs.org/docs/release/2.1.14/minified/require.js",
-		"Zepto": "http://zeptojs.com/zepto.min.js",
-		"head.js 1.0.3 (Asset Loader)": "http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js",
-		"head.js 1.0.3 (Responsive Design + Feature Detections + Asset Loader)": "http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js",
-		"head.js 1.0.3 (Responsive Design + Feature Detections)": "http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js",
-		"jQuery 1.11.1": "http://code.jquery.com/jquery-1.11.1.min.js",
-		"jQuery 2.1.1": "http://code.jquery.com/jquery-2.1.1.min.js",
-		"jQuery Boilerplate": "https://raw.githubusercontent.com/jquery-boilerplate/jquery-boilerplate/master/dist/jquery.boilerplate.js",
-		"jQuery Migrate 1.2.1": "//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		"jquery": "http://code.jquery.com/jquery.min.js"
 	},
 	"packages":
 	{
-		"Bootstrap": "https://github.com/twbs/bootstrap/releases/download/v3.2.0/bootstrap-3.2.0-dist.zip",
-		"Bootstrap (SASS)": "https://github.com/twbs/bootstrap-sass/archive/v3.2.0.tar.gz",
-		"Bootstrap (Source Code)": "https://github.com/twbs/bootstrap/archive/v3.2.0.zip",
-		"CodeIgniter": "http://ellislab.com/codeigniter/download",
-		"H5BP 4.3.0": "https://github.com/h5bp/html5-boilerplate/archive/v4.3.0.zip",
-		"H5BP Mobile 4.1.2": "https://github.com/h5bp/mobile-boilerplate/zipball/v4.1.2",
-		"Wordpress": "http://wordpress.org/latest.zip",
-		"Zend Framework 1.12.7 Full": "https://packages.zendframework.com/releases/ZendFramework-1.12.7/ZendFramework-1.12.7.zip",
-		"Zend Framework 2.3.1 Full": "https://packages.zendframework.com/releases/ZendFramework-2.3.1/ZendFramework-2.3.1.zip"
+		"html5_boilerplate": "https://github.com/h5bp/html5-boilerplate/zipball/master"
 	}
 }
