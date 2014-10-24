@@ -12,7 +12,7 @@ Open **PowerShell** by right-clicking and selecting **Run as Administrator**.
 ```
 cd "C:\Program Files\Sublime Text 3\"
 git clone https://<username>@bitbucket.org/maqinainternet/sublime-text.git Data
-sudo npm run install
+npm run install
 ```
 
 ## Install on Ubuntu
