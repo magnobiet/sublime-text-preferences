@@ -1,10 +1,37 @@
 {
 	"files":
 	{
-		"jquery": "http://code.jquery.com/jquery.min.js"
+		"Typeahead.js": "http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js",
+		"jQuery 1.11.1": "http://code.jquery.com/jquery-1.11.1.min.js",
+		"jQuery 1.11.1 (Development)": "http://code.jquery.com/jquery-1.11.1.js",
+		"jQuery 2.1.1": "http://code.jquery.com/jquery-2.1.1.min.js",
+		"jQuery 2.1.1 (Development)": "http://code.jquery.com/jquery-2.1.1.js",
+		"jQuery Boilerplate": "https://raw.githubusercontent.com/jquery-boilerplate/jquery-boilerplate/master/dist/jquery.boilerplate.js",
+		"jQuery Cycle 2": "http://malsup.github.io/min/jquery.cycle2.min.js",
+		"jQuery Cycle 2 (Development)": "http://malsup.github.io/jquery.cycle2.js",
+		"jQuery Cycle 2 Carousel": "http://malsup.github.io/jquery.cycle2.carousel.js",
+		"jQuery Cycle 2 Center": "http://malsup.github.io/jquery.cycle2.center.js",
+		"jQuery Cycle 2 Swipe": "http://malsup.github.io/jquery.cycle2.swipe.js",
+		"jQuery Cycle 2 Tile": "http://malsup.github.io/jquery.cycle2.tile.js",
+		"jQuery Cycle 2 iOS6 Fix": "http://malsup.github.io/ios6fix.js",
+		"jQuery Infinite Scroll": "https://raw.githubusercontent.com/paulirish/infinite-scroll/master/jquery.infinitescroll.min.js",
+		"jQuery Infinite Scroll (Development)": "https://raw.githubusercontent.com/paulirish/infinite-scroll/master/jquery.infinitescroll.js",
+		"jQuery MeioMask": "https://raw.githubusercontent.com/fabiomcosta/jquery-meiomask/master/dist/meiomask.min.js",
+		"jQuery MeioMask (Development)": "https://raw.githubusercontent.com/fabiomcosta/jquery-meiomask/master/dist/meiomask.js",
+		"jQuery Migrate 1.2.1": "http://code.jquery.com/jquery-migrate-1.2.1.min.js",
+		"jQuery Migrate 1.2.1 (Development)": "http://code.jquery.com/jquery-migrate-1.2.1.js",
+		"jQuery Validate 1.13.1": "http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js",
+		"jQuery Validate 1.13.1 (Development)": "http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js",
+		"jQuery Validate 1.13.1 Additional Methods": "http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js",
+		"jQuery Validate 1.13.1 Messages pt-BR": "http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/localization/messages_pt_BR.js"
 	},
 	"packages":
 	{
-		"html5_boilerplate": "https://github.com/h5bp/html5-boilerplate/zipball/master"
+		"CodeIgniter 2.2": "https://github.com/bcit-ci/CodeIgniter/archive/2.2-stable.zip",
+		"Twitter Bootstrap 3.3.1": "https://github.com/twbs/bootstrap/releases/download/v3.3.1/bootstrap-3.3.1-dist.zip",
+		"Twitter Bootstrap 3.3.1 (SASS)": "https://github.com/twbs/bootstrap-sass/archive/v3.3.1.tar.gz",
+		"Twitter Bootstrap 3.3.1 (Source code)": "https://github.com/twbs/bootstrap/archive/v3.3.1.zip",
+		"iScroll": "https://github.com/cubiq/iscroll/archive/master.zip",
+		"jQuery Chosen 1.2.0": "https://github.com/harvesthq/chosen/releases/download/v1.2.0/chosen_v1.2.0.zip"
 	}
 }
