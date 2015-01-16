@@ -5,7 +5,7 @@
 
 ## Install on Windows
 
-![Windows](https://bytebucket.org/maqinainternet/sublime-text/raw/9c95a9a26783c224b5b388506e6803c05c71b69d/Images/install-windows.gif?token=7f2a6d3e530fe0782050ae0687cffc4bd91d93b4)
+![Windows](https://bytebucket.org/magnobiet/sublime-text/raw/4dcd8dbdf134d57ba3f99d4abf778e3c3fe42221/Images/install-windows.gif)
 
 Open **PowerShell** by right-clicking and selecting **Run as Administrator**.
 
