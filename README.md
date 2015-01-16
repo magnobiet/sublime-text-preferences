@@ -11,7 +11,7 @@ Open **PowerShell** by right-clicking and selecting **Run as Administrator**.
 
 ```
 cd "C:\Program Files\Sublime Text 3\"
-git clone https://<username>@bitbucket.org/maqinainternet/sublime-text.git Data
+git clone https://<username>@bitbucket.org/magnobiet/sublime-text.git Data
 npm run install
 ```
 
@@ -22,7 +22,7 @@ cd $HOME/Downloads
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3065_amd64.deb
 sudo dpkg -i sublime-text_build-*.deb
 cd $HOME/.config/
-git clone git@bitbucket.org:maqinainternet/sublime-text.git sublime-text-3
+git clone git@bitbucket.org:magnobiet/sublime-text.git sublime-text-3
 sudo npm run install
 ```
 
@@ -74,3 +74,9 @@ sudo npm run install
 * Trimmer
 * Vagrant
 * YUI Compressor
+
+## Icon
+
+![Sublime Text Icon](https://bytebucket.org/magnobiet/sublime-text/raw/d09deaf6216d35f9a252dd02157f77bfe4a424cf/Icons/sublime-text.png)
+
+by [Jon-Paul Lunney](https://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon)
