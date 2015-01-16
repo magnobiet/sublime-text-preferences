@@ -25,6 +25,7 @@
 	],
 	"save_on_focus_lost": true,
 	"show_encoding": true,
+	"show_line_endings": true,
 	"spell_check": false,
 	"tab_size": 4,
 	"trim_automatic_white_space": true,
