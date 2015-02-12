@@ -1,4 +1,13 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2",
+		"ssl-linux"
+	],
 	"installed_packages":
 	[
 		"AngularJS",
@@ -12,7 +21,7 @@
 		"Can I Use",
 		"cdnjs",
 		"Color Highlighter",
-		"CSScomb JS",
+		"CSScomb",
 		"DocBlockr",
 		"Dotfiles Syntax Highlighting",
 		"EditorConfig",
@@ -31,6 +40,7 @@
 		"List stylesheet variables",
 		"Markdown Preview",
 		"Nettuts+ Fetch",
+		"Package Control",
 		"PHP Getters and Setters",
 		"PlainTasks",
 		"Sass",
