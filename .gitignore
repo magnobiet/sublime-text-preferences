@@ -1,6 +1,7 @@
 /Index/*
 /Installed Packages/PyV8
 /Packages/PyV8
+/Packages/User/Color Highlighter/icons
 /Backup/
 *.cache
 *.last-run
