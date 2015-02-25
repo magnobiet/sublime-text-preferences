@@ -14,6 +14,7 @@
 		"node_modules",
 		"bower_components"
 	],
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
