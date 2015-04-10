@@ -11,9 +11,19 @@
 		"lint_mode": "background",
 		"linters":
 		{
-			"csslint":
+			"coffee":
 			{
 				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"csslint":
+			{
+				"@disable": true,
 				"args":
 				[
 				],
@@ -23,6 +33,16 @@
 				],
 				"ignore": "",
 				"warnings": ""
+			},
+			"jscs":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
 			},
 			"jshint":
 			{
@@ -45,9 +65,36 @@
 				],
 				"strict": true
 			},
-			"scss":
+			"php":
 			{
 				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"pylint":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"disable": "",
+				"enable": "",
+				"excludes":
+				[
+				],
+				"paths":
+				[
+				],
+				"rcfile": "",
+				"show-codes": false
+			},
+			"scss":
+			{
+				"@disable": true,
 				"args":
 				[
 				],
@@ -60,6 +107,7 @@
 		},
 		"mark_style": "outline",
 		"no_column_highlights_line": false,
+		"passive_warnings": false,
 		"paths":
 		{
 			"linux":
