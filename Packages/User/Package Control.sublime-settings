@@ -51,6 +51,7 @@
 		"SideBarEnhancements",
 		"SqlBeautifier",
 		"StringEncode",
+		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-coffee",
 		"SublimeLinter-contrib-scss-lint",
