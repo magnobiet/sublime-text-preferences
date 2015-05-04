@@ -38,14 +38,17 @@ sudo npm run install
 * Bower
 * BracketHighlighter
 * BufferScroll
+* CakePHP (tmbundle)
 * Can I Use
 * cdnjs
+* CodeIgniter Snippets
 * Color Highlighter
 * CSScomb
 * DocBlockr
 * Dotfiles Syntax Highlighting
 * EditorConfig
 * Emmet
+* FileSystem Autocompletion
 * Git
 * GitGutter
 * Grunt
@@ -71,6 +74,7 @@ sudo npm run install
 * SideBarEnhancements
 * SqlBeautifier
 * StringEncode
+* SublimeCodeIntel
 * SublimeLinter
 * SublimeLinter-coffee
 * SublimeLinter-contrib-scss-lint
