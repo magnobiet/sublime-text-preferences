@@ -52,6 +52,7 @@ sudo npm run install
 * Git
 * GitGutter
 * Grunt
+* HTML Compressor
 * HTML-CSS-JS Prettify
 * HTML5
 * Jade
