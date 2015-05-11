@@ -1,1 +1,1 @@
-{"sublime_text": "*", "platforms": ["*"], "version": "2015.02.03.23.14.11", "dependencies": [], "description": "Sublime plugin for CSScomb\u2014CSS coding style formatter", "url": "https://github.com/csscomb/sublime-csscomb"}
+{"url": "https://github.com/csscomb/sublime-csscomb", "platforms": ["*"], "description": "Sublime plugin for CSScomb\u2014CSS coding style formatter", "version": "2015.02.03.23.14.11", "sublime_text": "*", "dependencies": []}
