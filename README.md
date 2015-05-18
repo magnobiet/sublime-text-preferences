@@ -52,6 +52,7 @@ sudo npm run install
 * Git
 * GitGutter
 * Grunt
+* Highlight
 * HTML Compressor
 * HTML-CSS-JS Prettify
 * HTML5
@@ -68,6 +69,7 @@ sudo npm run install
 * Nettuts+ Fetch
 * Package Control
 * PHP Getters and Setters
+* phpfmt
 * PlainTasks
 * Sass
 * SassBeautify
@@ -84,6 +86,7 @@ sudo npm run install
 * SublimeLinter-jshint
 * SublimeLinter-json
 * SublimeLinter-php
+* SublimeLinter-phplint
 * SublimeLinter-pylint
 * TrailingSpaces
 * Trimmer
