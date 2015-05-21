@@ -1,0 +1,6 @@
+{
+	"ignore_sublime_settings": true,
+	"jsbeautifyrc_files": false,
+	"format_on_save": true,
+	"max_preserve_newlines": 2
+}
