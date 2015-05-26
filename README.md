@@ -1,23 +1,29 @@
 # Sublime Text 3
 
-* [Download](http://www.sublimetext.com/3)
-* [Packages](https://sublime.wbond.net/)
+> The text editor you'll fall in love with
 
-## Install on Windows
+> Sublime Text is a sophisticated text editor for code, markup and prose.
+You'll love the slick user interface, extraordinary features and amazing performance.
 
-![Windows](https://raw.githubusercontent.com/magnobiet/sublime-text/master/Images/install-windows.gif)
+* [Official website](http://www.sublimetext.com/3)
+* [Package Control](https://sublime.wbond.net/)
 
-Open **PowerShell** by right-clicking and selecting **Run as Administrator**.
+## Install
 
-```
+### Windows
+
+- Download [installer](http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203083%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
+- Open **PowerShell** by right-clicking and selecting **Run as Administrator**
+
+```powershell
 cd "C:\Program Files\Sublime Text 3\"
 git clone https://github.com/magnobiet/sublime-text.git Data
 npm run install
 ```
 
-## Install on Linux Ubuntu
+### Linux Ubuntu (and Derivatives)
 
-```
+```bash
 cd $HOME/Downloads
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
 sudo dpkg -i sublime-text_build-*.deb
@@ -67,6 +73,7 @@ sudo npm run install
 * List stylesheet variables
 * Markdown Preview
 * Nettuts+ Fetch
+* nginx
 * Package Control
 * PHP Getters and Setters
 * phpfmt
