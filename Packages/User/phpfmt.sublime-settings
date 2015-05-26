@@ -1,7 +1,10 @@
 {
 	"enable_auto_align": true,
-	"format_on_save":true,
-	"passes": [],
+	"format_on_save": true,
+	"passes":
+	[
+	],
 	"psr1": true,
-	"version": 2
+	"skip_if_ini_missing": true,
+	"version": 3
 }
