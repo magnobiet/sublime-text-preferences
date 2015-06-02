@@ -1049,7 +1049,7 @@ if ("introspect" == $cmd) {
 	$all_found_implements = [];
 	while ($row = $results->fetchArray()) {
 		$all_found_implements[$row['implements']][] = [
-			'filename' => $row['filename'],
+			'filename' => realpath($row['filename']),
 			'implemented_by' => $row['implemented_by'],
 		];
 	}
@@ -1062,7 +1062,7 @@ if ("introspect" == $cmd) {
 	$all_found_extends = [];
 	while ($row = $results->fetchArray()) {
 		$all_found_extends[$row['extends']][] = [
-			'filename' => $row['filename'],
+			'filename' => realpath($row['filename']),
 			'extended_by' => $row['extended_by'],
 		];
 	}
@@ -1074,7 +1074,7 @@ if ("introspect" == $cmd) {
 	$results = $db->query("SELECT * FROM classes WHERE class LIKE '%" . SQLite3::escapeString($target) . "'");
 	while ($row = $results->fetchArray()) {
 		$found_classes = [[
-			'filename' => $row['filename'],
+			'filename' => realpath($row['filename']),
 			'class' => $row['class'],
 			'extends' => $row['extends'],
 			'implements' => $row['implements'],
@@ -1099,7 +1099,7 @@ if ("introspect" == $cmd) {
 	$found_calls = [];
 	while ($row = $results->fetchArray()) {
 		$found_calls[] = [
-			'filename' => $row['filename'],
+			'filename' => realpath($row['filename']),
 			'called' => $row['called'],
 		];
 	}

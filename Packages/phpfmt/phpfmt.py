@@ -889,14 +889,18 @@ class TogglePassMenuCommand(sublime_plugin.TextCommand):
                 chosenPass = descriptions[i].split(' ')
                 option = chosenPass[0]
 
+                passDesc = option
+                if option in passesOptions:
+                    passDesc = passesOptions[option]['description']
+
                 if option in passes:
                     passes.remove(option)
-                    msg = "phpfmt: "+passesOptions[option]['description']+" disabled"
+                    msg = "phpfmt: "+passDesc+" disabled"
                     print(msg)
                     sublime.status_message(msg)
                 else:
                     passes.append(option)
-                    msg = "phpfmt: "+passesOptions[option]['description']+" enabled"
+                    msg = "phpfmt: "+passDesc+" enabled"
                     print(msg)
                     sublime.status_message(msg)
 
@@ -933,14 +937,18 @@ class ToggleExcludeMenuCommand(sublime_plugin.TextCommand):
                 chosenPass = descriptions[i].split(' ')
                 option = chosenPass[0]
 
+                passDesc = option
+                if option in passesOptions:
+                    passDesc = passesOptions[option]['description']
+
                 if option in excludes:
                     excludes.remove(option)
-                    msg = "phpfmt: "+passesOptions[option]['description']+" disabled"
+                    msg = "phpfmt: "+passDesc+" disabled"
                     print(msg)
                     sublime.status_message(msg)
                 else:
                     excludes.append(option)
-                    msg = "phpfmt: "+passesOptions[option]['description']+" enabled"
+                    msg = "phpfmt: "+passDesc+" enabled"
                     print(msg)
                     sublime.status_message(msg)
 
