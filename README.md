@@ -58,6 +58,7 @@ sudo npm run install
 * Git
 * GitGutter
 * Grunt
+* Handlebars
 * Highlight
 * HTML Compressor
 * HTML-CSS-JS Prettify
