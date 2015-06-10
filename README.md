@@ -26,10 +26,11 @@ npm run install
 ```bash
 cd $HOME/Downloads
 wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
-sudo dpkg -i sublime-text_build-*.deb
+dpkg -i sublime-text_build-*.deb
 cd $HOME/.config/
 git clone git@github.com:magnobiet/sublime-text.git sublime-text-3
-sudo npm run install
+cd sublime-text-3
+npm run install
 ```
 
 ## Installed Packages
