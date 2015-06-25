@@ -1,6 +1,7 @@
 [
     {"caption": "phpfmt: format now", "command": "fmt_now"},
     {"caption": "phpfmt: disable space around exclamation mark - Laravel Only", "command": "toggle", "args": {"option":"space_around_exclamation_mark"}},
+    {"caption": "phpfmt: indentation with spaces", "command": "indent_with_spaces"},
 
     {"caption": "phpfmt: toggle additional transformations", "command": "toggle_pass_menu" },
     {"caption": "phpfmt: toggle excluded transformations", "command": "toggle_exclude_menu" },
@@ -12,7 +13,7 @@
     {"caption": "phpfmt: toggle CakePHP style (experimental)", "command": "toggle", "args": {"option":"cakephp_style"}},
     {"caption": "phpfmt: toggle dependency autoimport", "command": "toggle", "args": {"option":"autoimport"}},
     {"caption": "phpfmt: toggle format on save", "command": "toggle", "args": {"option":"format_on_save"}},
-    {"caption": "phpfmt: toggle indent with space", "command": "toggle", "args": {"option":"indent_with_space"}},
+
     {"caption": "phpfmt: toggle Laravel style (deprecated)", "command": "toggle", "args": {"option":"laravel_style"}},
     {"caption": "phpfmt: toggle php.vet", "command": "toggle", "args": {"option":"vet"}},
     {"caption": "phpfmt: toggle PSR1 - Class and Methods names", "command": "toggle", "args": {"option":"psr1_naming"}},
@@ -29,5 +30,7 @@
     {"caption": "phpfmt: generate PHPDoc block", "command": "generate_phpdoc"},
     {"caption": "phpfmt: look for .php.tools.ini", "command": "toggle", "args": {"option":"readini"}},
     {"caption": "phpfmt: order method within classes", "command": "order_method"},
-    {"caption": "phpfmt: refactor", "command": "refactor"}
+    {"caption": "phpfmt: refactor", "command": "refactor"},
+
+    {"caption": "phpfmt: toggle PHP 5.5 compatibility mode", "command": "toggle", "args": {"option":"php55compat"}}
 ]

@@ -17,5 +17,8 @@
     "3.6.0": "messages/3.6.0.txt",
     "3.9.0": "messages/3.9.0.txt",
     "3.14.0": "messages/3.14.0.txt",
-    "3.21.0": "messages/3.21.0.txt"
+    "3.21.0": "messages/3.21.0.txt",
+    "3.27.0": "messages/3.27.0.txt",
+    "4.0.1": "messages/4.0.1.txt",
+    "4.4.0": "messages/4.4.0.txt"
 }
