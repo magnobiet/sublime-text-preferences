@@ -36,11 +36,12 @@ npm run install
 ## Installed Packages
 * AlignTab
 * AngularJS
+* AngularJS Snippets
 * ApacheConf.tmLanguage
 * ASCII Decorator
 * AutoFileName
 * Autoprefixer
-* Better CoffeeScript
+* ~~Better CoffeeScript~~
 * Bootstrap 3 Snippets
 * Bower
 * BracketHighlighter
@@ -62,19 +63,20 @@ npm run install
 * Handlebars
 * Highlight
 * HTML Compressor
-* HTML-CSS-JS Prettify
 * HTML5
 * Jade
 * JavaScript Console
 * JavaScript Patterns
 * JavaScript Snippets
 * JsFormat
-* LESS
+* Laravel 5 Artisan
+* Laravel 5 Snippets
+* ~~LESS~~
 * Line Endings Unify
 * LineEndings
 * List stylesheet variables
 * Markdown Preview
-* Nettuts+ Fetch
+* ~~Nettuts+ Fetch~~
 * nginx
 * Package Control
 * PHP Getters and Setters
@@ -84,6 +86,7 @@ npm run install
 * SassBeautify
 * SCSS
 * SideBarEnhancements
+* Silex Snippets
 * SqlBeautifier
 * StringEncode
 * SublimeCodeIntel
@@ -97,9 +100,10 @@ npm run install
 * SublimeLinter-php
 * SublimeLinter-phplint
 * SublimeLinter-pylint
+* SublimeLinter-xmllint
 * TrailingSpaces
 * Trimmer
-* Vagrant
+* ~~Vagrant~~
 * YUI Compressor
 
 ## Icon
