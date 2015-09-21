@@ -1,10 +1,13 @@
 {
 	"enable_auto_align": true,
 	"format_on_save": true,
-	"passes": [],
+	"passes":
+	[
+		"ReindentSwitchBlocks"
+	],
 	"php55compat": true,
 	"php55warning": true,
 	"psr1": true,
-	"skip_if_ini_missing": true,
-	"version": 3
+	"skip_if_ini_missing": false,
+	"version": 4
 }

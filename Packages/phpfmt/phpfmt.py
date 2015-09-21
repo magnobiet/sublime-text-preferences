@@ -16,134 +16,36 @@ if int(sublime.version()) >= 3000:
 else:
     from diff_match_patch.python2.diff_match_patch import diff_match_patch
 
+def getSetting( view, settings, key, default ):
+    local = 'phpfmt.' + key
+    return view.settings().get( local, settings.get( key, default ) )
 
-passesOptions = {
-    "AddMissingParentheses":{
-        "description": "add missing parentheses",
-        "oldName":"add_missing_parentheses",
-    },
-    "AlignDoubleSlashComments":{
-        "description": "comments auto align",
-        "oldName":"comment_auto_align",
-    },
-    "AlignTypehint":{
-        "description": "typehint auto align",
-        "oldName":"typehint_auto_align",
-    },
-    "AutoPreincrement":{
-        "description": "automatic preincrement",
-        "oldName":"autopreincrement",
-    },
-    "EncapsulateNamespaces":{
-        "description": "automatic namespace encapsulation",
-        "oldName":"encapsulate_namespaces",
-    },
-    "JoinToImplode":{
-        "description": "replace join() to implode()",
-        "oldName":"join_to_implode",
-    },
-    "MergeElseIf":{
-        "description": "merge else if into elseif",
-        "oldName":"merge_else_if",
-    },
-    "PrettyPrintDocBlocks":{
-        "description": "doc block beautifier",
-        "oldName":"pretty_print_doc_blocks",
-    },
-    "PSR2LnAfterNamespace":{
-        "description": "automatic linebreak after namespace",
-        "oldName":"linebreak_after_namespace",
-    },
-    "RemoveUseLeadingSlash":{
-        "description": "remove_leading_slash",
-        "oldName":"remove_leading_slash",
-    },
-    "RestoreComments":{
-        "description": "skipping comment formatting",
-        "oldName":"restore_comments",
-    },
-    "ReturnNull":{
-        "description": "remove empty returns",
-        "oldName":"remove_return_empty",
-    },
-    "ShortArray":{
-        "description": "short array",
-        "oldName":"short_array",
-    },
-    "SpaceBetweenMethods":{
-        "description": "automatic linebreak between methods",
-        "oldName":"linebreak_between_methods"
-    },
-    "StripExtraCommaInArray":{
-        "description": "strip extra comma in array",
-        "oldName":"strip_extra_comma_in_array",
-    },
-    "UpgradeToPreg":{
-        "description": "regex call upgrade to preg_*",
-        "oldName":"upgrade_to_preg",
-    },
-    "WordWrap":{
-        "description": "wordwrap (80 columns)",
-        "oldName":"wordwrap",
-    },
-    "LeftWordWrap":{
-        "description": "wordwrap (80 columns - left)",
-        "oldName":"left_wordwrap",
-    },
-    "WrongConstructorName":{
-        "description": "update old style constructor",
-        "oldName":"wrong_constructor_name",
-    },
-    "ReplaceIsNull":{
-        "description": "replace 'is_null' with 'null ==='",
-        "oldName":"replace_is_null",
-    },
-    "DoubleToSingleQuote":{
-        "description": "replace double quotes with single quotes",
-        "oldName":"double_to_single_quote",
-    },
-    "IndentTernaryConditions":{
-        "description": "indent multiline ternary comparisons",
-        "oldName":"indent_ternary_conditions",
-    },
-    "ClassToSelf":{
-        "description": "rename class name to 'self'",
-        "oldName":"class_to_self",
-    },
-    "ClassToStatic":{
-        "description": "rename class name to 'static'",
-        "oldName":"class_to_static",
-    }
-}
 def dofmt(eself, eview, sgter = None, src = None, force = False):
     self = eself
     view = eview
     s = sublime.load_settings('phpfmt.sublime-settings')
 
-    additional_extensions = s.get("additional_extensions", [])
-    autoimport = s.get("autoimport", True)
-    cakephp_style = s.get("cakephp_style", False)
-    debug = s.get("debug", False)
-    enable_auto_align = s.get("enable_auto_align", False)
-    ignore_list = s.get("ignore_list", "")
-    indent_with_space = s.get("indent_with_space", False)
-    laravel_style = s.get("laravel_style", False)
-    psr = s.get("psr1_and_2", False)
-    psr1 = s.get("psr1", False)
-    psr1_naming = s.get("psr1_naming", psr1)
-    psr2 = s.get("psr2", False)
-    smart_linebreak_after_curly = s.get("smart_linebreak_after_curly", True)
-    skip_if_ini_missing = s.get("skip_if_ini_missing", False)
-    space_around_exclamation_mark = s.get("space_around_exclamation_mark", False)
-    visibility_order = s.get("visibility_order", False)
-    yoda = s.get("yoda", False)
-    readini = s.get("readini", False)
-    php55compat = s.get("php55compat", False)
 
-    passes = s.get("passes", [])
-    excludes = s.get("excludes", [])
+    additional_extensions = getSetting( view, s, "additional_extensions", [])
+    autoimport = getSetting( view, s, "autoimport", True)
+    debug = getSetting( view, s, "debug", False)
+    enable_auto_align = getSetting( view, s, "enable_auto_align", False)
+    ignore_list = getSetting( view, s, "ignore_list", "")
+    indent_with_space = getSetting( view, s, "indent_with_space", False)
+    psr1 = getSetting( view, s, "psr1", False)
+    psr1_naming = getSetting( view, s, "psr1_naming", psr1)
+    psr2 = getSetting( view, s, "psr2", False)
+    smart_linebreak_after_curly = getSetting( view, s, "smart_linebreak_after_curly", True)
+    skip_if_ini_missing = getSetting( view, s, "skip_if_ini_missing", False)
+    visibility_order = getSetting( view, s, "visibility_order", False)
+    yoda = getSetting( view, s, "yoda", False)
+    readini = getSetting( view, s, "readini", False)
+    php55compat = getSetting( view, s, "php55compat", False)
 
-    php_bin = s.get("php_bin", "php")
+    passes = getSetting( view, s, "passes", [])
+    excludes = getSetting( view, s, "excludes", [])
+
+    php_bin = getSetting( view, s, "php_bin", "php")
     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
     if php55compat is True:
         formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
@@ -234,36 +136,9 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         sublime.message_dialog('Warning.\nPHP 5.6 or newer is required.\nPlease, upgrade your local PHP installation.')
         return False
 
-    if not s.get("laravel_deprecated_warning", False) and laravel_style == True:
-        s.set("laravel_deprecated_warning", True)
-        sublime.save_settings('phpfmt.sublime-settings')
-        sublime.message_dialog('Warning.\nLaravel-style is deprecated and will be removed in the next major release.\nPlease, consider using AllmanStyleBraces.')
-
-    if psr2 == True and laravel_style == True:
-        sublime.message_dialog('Warning.\nLaravel-style and PSR-2 are mutually exclusive.');
-        return False
-
     if debug:
-        cmd_ver = [php_bin,"-v"];
-        if os.name == 'nt':
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
-        else:
-            p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
-        res, err = p.communicate()
-        print("phpfmt (php version) out:\n", res.decode('utf-8'))
-        print("phpfmt (php version) err:\n", err.decode('utf-8'))
-        cmd_ver = [php_bin,formatter_path,"--version"];
-        if os.name == 'nt':
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
-        else:
-            p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
-        res, err = p.communicate()
-        print("phpfmt (fmt.phar version) out:\n", res.decode('utf-8'))
-        print("phpfmt (fmt.phar version) err:\n", err.decode('utf-8'))
+        s = debugEnvironment(php_bin, formatter_path)
+        print(s)
 
     lintret = 1
     if "AutoSemicolon" in passes:
@@ -302,11 +177,6 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         cmd_fmt.append(formatter_path)
         cmd_fmt.append("--config="+config_file)
 
-        if psr:
-            psr1 = True
-            psr1_naming = True
-            psr2 = True
-
         if psr1:
             cmd_fmt.append("--psr1")
 
@@ -333,12 +203,6 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         if yoda:
             cmd_fmt.append("--yoda")
 
-        if laravel_style:
-            cmd_fmt.append("--laravel")
-
-        if cakephp_style:
-            cmd_fmt.append("--cakephp")
-
         if sgter is not None:
             cmd_fmt.append("--setters_and_getters="+sgter)
             cmd_fmt.append("--constructor="+sgter)
@@ -349,16 +213,8 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
         if len(passes) > 0:
             cmd_fmt.append("--passes="+','.join(passes))
 
-        excludeextras = []
-
         if len(excludes) > 0:
-            excludeextras = excludes
-
-        if space_around_exclamation_mark:
-            excludeextras.append("SpaceAroundExclamationMark")
-
-        if len(excludeextras) > 0:
-            cmd_fmt.append("--exclude="+','.join(excludeextras))
+            cmd_fmt.append("--exclude="+','.join(excludes))
 
         if debug:
             cmd_fmt.append("-v")
@@ -393,17 +249,16 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
             p.stdin.write(src.encode('utf-8'))
 
         res, err = p.communicate()
-        if p.returncode != 0:
-            return ''
 
         if debug:
             print("p:\n", p.returncode)
             print("err:\n", err.decode('utf-8'))
 
+        if p.returncode != 0:
+            return ''
+
         if sgter is not None:
             sublime.set_timeout(revert_active_window, 50)
-            time.sleep(1)
-            sublime.active_window().active_view().run_command("phpfmt_vet")
 
         return res.decode('utf-8')
     else:
@@ -419,18 +274,14 @@ def dogeneratephpdoc(eself, eview):
 
     additional_extensions = s.get("additional_extensions", [])
     autoimport = s.get("autoimport", True)
-    cakephp_style = s.get("cakephp_style", False)
     debug = s.get("debug", False)
     enable_auto_align = s.get("enable_auto_align", False)
     ignore_list = s.get("ignore_list", "")
     indent_with_space = s.get("indent_with_space", False)
-    laravel_style = s.get("laravel_style", False)
-    psr = s.get("psr1_and_2", False)
     psr1 = s.get("psr1", False)
     psr1_naming = s.get("psr1_naming", psr1)
     psr2 = s.get("psr2", False)
     smart_linebreak_after_curly = s.get("smart_linebreak_after_curly", True)
-    space_around_exclamation_mark = s.get("space_around_exclamation_mark", False)
     visibility_order = s.get("visibility_order", False)
     yoda = s.get("yoda", False)
 
@@ -485,11 +336,6 @@ def dogeneratephpdoc(eself, eview):
         cmd_fmt.append(formatter_path)
         cmd_fmt.append("--config="+config_file)
 
-        if psr:
-            psr1 = True
-            psr1_naming = True
-            psr2 = True
-
         if psr1:
             cmd_fmt.append("--psr1")
 
@@ -509,12 +355,6 @@ def dogeneratephpdoc(eself, eview):
 
         if visibility_order:
             cmd_fmt.append("--visibility_order")
-
-        if laravel_style:
-            cmd_fmt.append("--laravel")
-
-        if cakephp_style:
-            cmd_fmt.append("--cakephp")
 
         passes.append("GeneratePHPDoc")
         if len(passes) > 0:
@@ -546,18 +386,14 @@ def doreordermethod(eself, eview):
 
     additional_extensions = s.get("additional_extensions", [])
     autoimport = s.get("autoimport", True)
-    cakephp_style = s.get("cakephp_style", False)
     debug = s.get("debug", False)
     enable_auto_align = s.get("enable_auto_align", False)
     ignore_list = s.get("ignore_list", "")
     indent_with_space = s.get("indent_with_space", False)
-    laravel_style = s.get("laravel_style", False)
-    psr = s.get("psr1_and_2", False)
     psr1 = s.get("psr1", False)
     psr1_naming = s.get("psr1_naming", psr1)
     psr2 = s.get("psr2", False)
     smart_linebreak_after_curly = s.get("smart_linebreak_after_curly", True)
-    space_around_exclamation_mark = s.get("space_around_exclamation_mark", False)
     visibility_order = s.get("visibility_order", False)
     yoda = s.get("yoda", False)
 
@@ -612,11 +448,6 @@ def doreordermethod(eself, eview):
         cmd_fmt.append(formatter_path)
         cmd_fmt.append("--config="+config_file)
 
-        if psr:
-            psr1 = True
-            psr1_naming = True
-            psr2 = True
-
         if psr1:
             cmd_fmt.append("--psr1")
 
@@ -637,13 +468,7 @@ def doreordermethod(eself, eview):
         if visibility_order:
             cmd_fmt.append("--visibility_order")
 
-        if laravel_style:
-            cmd_fmt.append("--laravel")
-
-        if cakephp_style:
-            cmd_fmt.append("--cakephp")
-
-        passes.append("OrderMethod")
+        passes.append("OrganizeClass")
         if len(passes) > 0:
             cmd_fmt.append("--passes="+','.join(passes))
 
@@ -672,7 +497,6 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
     view = eview
     s = sublime.load_settings('phpfmt.sublime-settings')
     debug = s.get("debug", False)
-    psr = s.get("psr1_and_2", False)
     psr1 = s.get("psr1", False)
     psr1_naming = s.get("psr1_naming", psr1)
     psr2 = s.get("psr2", False)
@@ -748,6 +572,60 @@ def dorefactor(eself, eview, refactor_from = None, refactor_to = None):
     else:
         print("lint error: ", lint_out)
 
+def debugEnvironment(php_bin, formatter_path):
+    ret = ""
+    cmd_ver = [php_bin,"-v"];
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+    else:
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    ret += ("phpfmt (php version):\n"+res.decode('utf-8'))
+    if err.decode('utf-8'):
+        ret += ("phpfmt (php version) err:\n"+err.decode('utf-8'))
+    ret += "\n"
+
+    cmd_ver = [php_bin,"-m"];
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+    else:
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    if res.decode('utf-8').find("tokenizer") != -1:
+        ret += ("phpfmt (php tokenizer) found\n")
+    else:
+        ret += ("phpfmt (php tokenizer):\n"+res.decode('utf-8'))
+        if err.decode('utf-8'):
+            ret += ("phpfmt (php tokenizer) err:\n"+err.decode('utf-8'))
+    ret += "\n"
+
+    cmd_ver = [php_bin,formatter_path,"--version"];
+    if os.name == 'nt':
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False, startupinfo=startupinfo)
+    else:
+        p = subprocess.Popen(cmd_ver, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+    res, err = p.communicate()
+    ret += ("phpfmt (fmt.phar version):\n"+res.decode('utf-8'))
+    if err.decode('utf-8'):
+        ret += ("phpfmt (fmt.phar version) err:\n"+err.decode('utf-8'))
+    ret += "\n"
+
+    s = sublime.load_settings('phpfmt.sublime-settings')
+    php55compat = s.get("php55compat", False)
+    ret += "PHP 5.5 compatibility mode: "
+    if php55compat:
+        ret += "True\n"
+    else:
+        ret += "False\n"
+    ret += "\n"
+
+    return ret
 
 def revert_active_window():
     sublime.active_window().active_view().run_command("revert")
@@ -888,6 +766,18 @@ class CalltipCommand(sublime_plugin.TextCommand):
 
         self.view.set_status("phpfmt", output)
 
+class DebugEnvCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        s = sublime.load_settings('phpfmt.sublime-settings')
+        php55compat = s.get("php55compat", False)
+
+        php_bin = s.get("php_bin", "php")
+        formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+        if php55compat is True:
+            formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.8.9.0.phar")
+
+        s = debugEnvironment(php_bin, formatter_path)
+        sublime.message_dialog(s)
 
 class FmtNowCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -934,8 +824,6 @@ class TogglePassMenuCommand(sublime_plugin.TextCommand):
                 option = chosenPass[0]
 
                 passDesc = option
-                if option in passesOptions:
-                    passDesc = passesOptions[option]['description']
 
                 if option in passes:
                     passes.remove(option)
@@ -984,8 +872,6 @@ class ToggleExcludeMenuCommand(sublime_plugin.TextCommand):
                 option = chosenPass[0]
 
                 passDesc = option
-                if option in passesOptions:
-                    passDesc = passesOptions[option]['description']
 
                 if option in excludes:
                     excludes.remove(option)
@@ -1009,10 +895,8 @@ class ToggleCommand(sublime_plugin.TextCommand):
         options = {
             "autocomplete":"autocomplete",
             "autoimport":"dependency autoimport",
-            "cakephp_style":"CakePHP style",
             "enable_auto_align":"auto align",
             "format_on_save":"format on save",
-            "laravel_style":"Laravel style",
             "php55compat":"PHP 5.5 compatibility mode",
             "psr1":"PSR1",
             "psr1_naming":"PSR1 Class and Method Naming",
@@ -1020,8 +904,6 @@ class ToggleCommand(sublime_plugin.TextCommand):
             "readini":"look for .php.tools.ini",
             "smart_linebreak_after_curly":"smart linebreak after curly",
             "skip_if_ini_missing":"skip if ini file is missing",
-            "space_around_exclamation_mark":"space around exclamation mark",
-            "vet":"vet",
             "visibility_order":"visibility order",
             "yoda":"yoda mode",
         }
@@ -1089,54 +971,6 @@ class SgterCamelCommand(sublime_plugin.TextCommand):
 class SgterGoCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         dofmt(self, self.view, 'golang')
-
-class PhpfmtVetCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        s = sublime.load_settings('phpfmt.sublime-settings')
-        run_vet = s.get('vet', False)
-        if not run_vet:
-            return False
-
-        view = self.view
-
-        uri = view.file_name()
-        dirNm, sfn = os.path.split(uri)
-        ext = os.path.splitext(uri)[1][1:]
-        additional_extensions = s.get("additional_extensions", [])
-
-        if "php" != ext and not ext in additional_extensions:
-            print("phpfmt (vet): not a PHP file")
-            return False
-
-
-        php_bin = s.get("php_bin", "php")
-        vetPath = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "vet.php")
-        cmdVet = [php_bin]
-        cmdVet.append(vetPath)
-        cmdVet.append(view.file_name())
-        if os.name == 'nt':
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            p = subprocess.Popen(cmdVet, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirNm, shell=False, startupinfo=startupinfo)
-        else:
-            p = subprocess.Popen(cmdVet, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=dirNm, shell=False)
-        res, err = p.communicate()
-        print("phpfmt (vet): "+res.decode('utf-8'))
-        print("phpfmt (vet) err: "+err.decode('utf-8'))
-        if len(res.decode('utf-8')) > 0:
-            outputToPanel("phpfmtvet", self, edit, res.decode('utf-8'));
-            # errors = res.decode('utf-8').split('\n')
-            # x = csv.reader(errors)
-            # regions = []
-            # for row in x:
-            #     line = self.view.full_line(self.view.text_point(row[1],0))
-            #     regions.append(line)
-            # view.erase_regions("vet")
-            # view.add_regions("vet", [line], "comment", "dot")
-            # print(view.get_regions("vet"))
-            # print("draw line")
-        else:
-            hidePanel("phpfmtvet", self, edit)
 
 class BuildOracleCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -1320,24 +1154,19 @@ version = s.get('version', 1)
 s.set('version', version)
 sublime.save_settings('phpfmt.sublime-settings')
 
-if version == 1:
-    # Convert to version 2
-    print("Convert to version 2")
-    passes = []
-    for (name, info) in passesOptions.items():
-        active = s.get(info["oldName"], False)
-        if active:
-            passes.append(name)
-        s.erase(info["oldName"])
-    s.erase('psr1_and_2')
-    s.set('passes', passes)
-    s.set('version', 2)
-    sublime.save_settings('phpfmt.sublime-settings')
-
 if version == 2:
     # Convert to version 3
     print("Convert to version 3")
     s.set('version', 3)
+    sublime.save_settings('phpfmt.sublime-settings')
+
+if version == 3:
+    # Convert to version 3
+    print("Convert to version 4")
+    s.set('version', 4)
+    passes = s.get('passes', [])
+    passes.append("ReindentSwitchBlocks")
+    s.set('passes', passes)
     sublime.save_settings('phpfmt.sublime-settings')
 
 
@@ -1424,6 +1253,7 @@ def merge(view, size, text, edit):
     vs.set("translate_tabs_to_spaces", False)
     origin_src = view.substr(sublime.Region(0, view.size()))
     if not origin_src.strip():
+        vs.set("translate_tabs_to_spaces", ttts)
         return (False, '')
 
     try:

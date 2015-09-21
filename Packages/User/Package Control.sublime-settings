@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -6,6 +7,7 @@
 	[
 		"AlignTab",
 		"AngularJS",
+		"AngularJS Snippets",
 		"ApacheConf.tmLanguage",
 		"ASCII Decorator",
 		"AutoFileName",
@@ -32,13 +34,14 @@
 		"Handlebars",
 		"Highlight",
 		"HTML Compressor",
-		"HTML-CSS-JS Prettify",
 		"HTML5",
 		"Jade",
 		"JavaScript Console",
 		"JavaScript Patterns",
 		"JavaScript Snippets",
 		"JsFormat",
+		"Laravel 5 Artisan",
+		"Laravel 5 Snippets",
 		"LESS",
 		"Line Endings Unify",
 		"LineEndings",
@@ -54,6 +57,7 @@
 		"SassBeautify",
 		"SCSS",
 		"SideBarEnhancements",
+		"Silex Snippets",
 		"SqlBeautifier",
 		"StringEncode",
 		"SublimeCodeIntel",
@@ -67,6 +71,7 @@
 		"SublimeLinter-php",
 		"SublimeLinter-phplint",
 		"SublimeLinter-pylint",
+		"SublimeLinter-xmllint",
 		"TrailingSpaces",
 		"Trimmer",
 		"Vagrant",

@@ -1,7 +1,40 @@
-# [php.fmt](https://github.com/dericofilho/php.tools) support for Sublime Text 2/3
+# [php.fmt](https://github.com/phpfmt/php.tools) support for Sublime Text 2/3
 
+### Installation
 
-php.fmt, php.tools and php.oracle aim to help PHP development.
+#### Requirements
+- **You must have a running copy of PHP on the machine you are running Sublime Text**
+
+Plugin runs with PHP 5.6 or newer installed in the machine running the plugin.
+
+There is a backwards compatible mode with PHP 5.5 - however not all improvements will be available in this mode.
+
+#### Install this plugin through Package Manager.
+
+- In Sublime Text press `ctrl+shift+P`
+- Choose `Package Control: Install Package`
+- Choose `phpfmt`
+
+#### Configuration (Windows)
+
+- Edit configuration file (`%AppData%\Sublime Text\Packages\phpfmt\phpfmt.sublime-settings`)
+- For field `"php_bin"` enter the path to the php.exe
+  Example: `"php_bin":"c:/PHP/php.exe"`
+
+#### Configuration (OS X and Linux)
+
+- Edit configuration file (`phpfmt.sublime-settings`)
+- For field `"php_bin"` enter the path to the php
+  Example: `"php_bin":"/usr/local/bin/php"`
+
+### Settings
+
+Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
+```
+{
+"php_bin":"/usr/local/bin/php",
+}
+```
 
 **The following features are available through command palette (`ctrl+shift+P` or `cmd+shift+P`) :**
 
@@ -169,39 +202,17 @@ $d = new D();
 </tr>
 </table>
 
-### Installation
-
-#### Requirements
-- **You must have a running copy of PHP on the machine you are running Sublime Text**
-
-Plugin runs with PHP 5.6 or newer installed in the machine running the plugin.
-
-There is a backwards compatible mode with PHP 5.5 - however not all improvements will be available in this mode.
-
-#### Install this plugin through Package Manager.
-
-- In Sublime Text press `ctrl+shift+P`
-- Choose `Package Control: Install Package`
-- Choose `phpfmt`
-
-#### Configuration (Windows)
-
-- Edit configuration file located at `%AppData%\Sublime Text 2\Packages\phpfmt\phpfmt.sublime-settings`
-- For field `"php_bin"` enter the path to the php.exe
-  Example: `"php_bin":"c:/PHP/php.exe"`
-
-### Settings
-
-Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
-```
-{
-"php_bin":"/usr/local/bin/php",
-}
-```
-
 ### Troubleshooting
 - Be sure you can run PHP from the command line.
-- If you are a MAMP user, please use the MAMP's PHP binary to execute the plugin. This issue might be handy to help you configure the plugin: https://github.com/dericofilho/sublime-phpfmt/issues/109
+- If you need support, please open an issue at [php.tools issues](https://github.com/phpfmt/php.tools/issues)
+
+### The Most FAQ
+
+***I want to use sublime-phpfmt, but it needs PHP 5.6 or newer and on my production
+server I have PHP 5.5 or older. What should I do?***
+
+Consider installing a standalone PHP 5.6 in a separate directory and have it *not*
+configured in the environment. Within the plugin, ensure `php_bin` parameter is pointed to this standalone installation.
 
 ### Acknowledgements
 - GoSublime - for the method to update the formatted buffer

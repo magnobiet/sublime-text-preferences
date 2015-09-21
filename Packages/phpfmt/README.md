@@ -1,23 +1,52 @@
-# [php.fmt](https://github.com/dericofilho/php.tools) support for Sublime Text 2/3
+# [php.fmt](https://github.com/phpfmt/php.tools) support for Sublime Text 2/3
 
+### Installation
 
-php.fmt, php.tools and php.oracle aim to help PHP development.
+#### Requirements
+- **You must have a running copy of PHP on the machine you are running Sublime Text**
+
+Plugin runs with PHP 5.6 or newer installed in the machine running the plugin.
+
+There is a backwards compatible mode with PHP 5.5 - however not all improvements will be available in this mode.
+
+#### Install this plugin through Package Manager.
+
+- In Sublime Text press `ctrl+shift+P`
+- Choose `Package Control: Install Package`
+- Choose `phpfmt`
+
+#### Configuration (Windows)
+
+- Edit configuration file (`%AppData%\Sublime Text\Packages\phpfmt\phpfmt.sublime-settings`)
+- For field `"php_bin"` enter the path to the php.exe
+  Example: `"php_bin":"c:/PHP/php.exe"`
+
+#### Configuration (OS X and Linux)
+
+- Edit configuration file (`phpfmt.sublime-settings`)
+- For field `"php_bin"` enter the path to the php
+  Example: `"php_bin":"/usr/local/bin/php"`
+
+### Settings
+
+Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
+```
+{
+"php_bin":"/usr/local/bin/php",
+}
+```
 
 **The following features are available through command palette (`ctrl+shift+P` or `cmd+shift+P`) :**
 
  *  phpfmt: format now
- *  phpfmt: disable space around exclamation mark - Laravel Only
  *  phpfmt: indentation with spaces
  *  phpfmt: toggle additional transformations
  *  phpfmt: toggle excluded transformations
  *  phpfmt: toggle skip execution when .php.tools.ini is missing
  *  phpfmt: toggle auto align
  *  phpfmt: toggle autocomplete
- *  phpfmt: toggle CakePHP style (experimental)
  *  phpfmt: toggle dependency autoimport
  *  phpfmt: toggle format on save
- *  phpfmt: toggle Laravel style (deprecated)
- *  phpfmt: toggle php.vet
  *  phpfmt: toggle PSR1 - Class and Methods names
  *  phpfmt: toggle PSR1
  *  phpfmt: toggle PSR2
@@ -31,9 +60,10 @@ php.fmt, php.tools and php.oracle aim to help PHP development.
  *  phpfmt: getter and setter (snake_case)
  *  phpfmt: generate PHPDoc block
  *  phpfmt: look for .php.tools.ini
- *  phpfmt: order method within classes
+ *  phpfmt: reorganize content of class
  *  phpfmt: refactor
  *  phpfmt: toggle PHP 5.5 compatibility mode
+ *  phpfmt: troubleshoot information
 
 
 ### Currently Supported Transformations:
@@ -43,11 +73,12 @@ php.fmt, php.tools and php.oracle aim to help PHP development.
  * AlignDoubleArrow                  Vertically align T_DOUBLE_ARROW (=>).
  * AlignDoubleSlashComments          Vertically align "//" comments.
  * AlignEquals                       Vertically align "=".
+ * AlignGroupDoubleArrow             Vertically align T_DOUBLE_ARROW (=>) by line groups.
  * AlignPHPCode                      Align PHP code within HTML block.
  * AlignTypehint                     Vertically align "//" comments.
  * AllmanStyleBraces                 Transform all curly braces into Allman-style.
  * AutoPreincrement                  Automatically convert postincrement to preincrement.
- * AutoSemicolon                     Beta - Add semicolons in statements ends.
+ * AutoSemicolon                     Add semicolons in statements ends.
  * CakePHPStyle                      Applies CakePHP Coding Style
  * ClassToSelf                       "self" is preferred within class, trait or interface.
  * ClassToStatic                     "static" is preferred within class, trait or interface.
@@ -64,9 +95,14 @@ php.fmt, php.tools and php.oracle aim to help PHP development.
  * MergeNamespaceWithOpenTag         Ensure there is no more than one linebreak before namespace
  * MildAutoPreincrement              Automatically convert postincrement to preincrement. (Deprecated pass. Use AutoPreincrement instead).
  * OrderMethod                       Sort methods within class in alphabetic order.
+ * OrderMethodAndVisibility          Sort methods within class in alphabetic and visibility order .
+ * OrganizeClass                     Organize class structure (beta).
  * PrettyPrintDocBlocks              Prettify Doc Blocks
  * PSR2EmptyFunction                 Merges in the same line of function header the body of empty functions.
  * PSR2MultilineFunctionParams       Break function parameters into multiple lines.
+ * ReindentAndAlignObjOps            Align object operators.
+ * ReindentSwitchBlocks              Reindent one level deeper the content of switch blocks.
+ * RemoveIncludeParentheses          Remove parentheses from include declarations.
  * RemoveUseLeadingSlash             Remove leading slash in T_USE imports.
  * ReplaceBooleanAndOr               Convert from "and"/"or" to "&&"/"||". Danger! This pass leads to behavior change.
  * ReplaceIsNull                     Replace is_null($a) with null === $a.
@@ -80,6 +116,7 @@ php.fmt, php.tools and php.oracle aim to help PHP development.
  * StripExtraCommaInArray            Remove trailing commas within array blocks
  * StripNewlineAfterClassOpen        Strip empty lines after class opening curly brace.
  * StripNewlineAfterCurlyOpen        Strip empty lines after opening curly brace.
+ * StripSpaces                       Remove all empty spaces
  * StripSpaceWithinControlStructures Strip empty lines within control structures.
  * TightConcat                       Ensure string concatenation does not have spaces, except when close to numbers.
  * UpgradeToPreg                     Upgrade ereg_* calls to preg_*
@@ -244,39 +281,17 @@ $d = new D();
 </tr>
 </table>
 
-### Installation
-
-#### Requirements
-- **You must have a running copy of PHP on the machine you are running Sublime Text**
-
-Plugin runs with PHP 5.6 or newer installed in the machine running the plugin.
-
-There is a backwards compatible mode with PHP 5.5 - however not all improvements will be available in this mode.
-
-#### Install this plugin through Package Manager.
-
-- In Sublime Text press `ctrl+shift+P`
-- Choose `Package Control: Install Package`
-- Choose `phpfmt`
-
-#### Configuration (Windows)
-
-- Edit configuration file located at `%AppData%\Sublime Text 2\Packages\phpfmt\phpfmt.sublime-settings`
-- For field `"php_bin"` enter the path to the php.exe
-  Example: `"php_bin":"c:/PHP/php.exe"`
-
-### Settings
-
-Prefer using the toggle options at command palette. However you might find yourself in need to setup where PHP is running, use this option below for the configuration file.
-```
-{
-"php_bin":"/usr/local/bin/php",
-}
-```
-
 ### Troubleshooting
 - Be sure you can run PHP from the command line.
-- If you are a MAMP user, please use the MAMP's PHP binary to execute the plugin. This issue might be handy to help you configure the plugin: https://github.com/dericofilho/sublime-phpfmt/issues/109
+- If you need support, please open an issue at [php.tools issues](https://github.com/phpfmt/php.tools/issues)
+
+### The Most FAQ
+
+***I want to use sublime-phpfmt, but it needs PHP 5.6 or newer and on my production
+server I have PHP 5.5 or older. What should I do?***
+
+Consider installing a standalone PHP 5.6 in a separate directory and have it *not*
+configured in the environment. Within the plugin, ensure `php_bin` parameter is pointed to this standalone installation.
 
 ### Acknowledgements
 - GoSublime - for the method to update the formatted buffer

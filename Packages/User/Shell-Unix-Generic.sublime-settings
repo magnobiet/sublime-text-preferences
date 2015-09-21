@@ -45,6 +45,8 @@
 		"zlogout",
 		"zprofile",
 		"zpreztorc",
-		".bash_custom"
+		".bash_custom",
+		".bash_aliases",
+		".bash_functions"
 	]
 }
