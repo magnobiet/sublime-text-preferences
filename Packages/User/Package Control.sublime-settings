@@ -53,6 +53,7 @@
 		"PHP Getters and Setters",
 		"phpfmt",
 		"PlainTasks",
+		"Reindent on save",
 		"Sass",
 		"SassBeautify",
 		"SCSS",
