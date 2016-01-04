@@ -133,7 +133,8 @@ def dofmt(eself, eview, sgter = None, src = None, force = False):
     print("phpfmt (php_ver) out:\n", res.decode('utf-8'))
     print("phpfmt (php_ver) err:\n", err.decode('utf-8'))
     if php55compat is False and ('PHP 5.3' in res.decode('utf-8') or 'PHP 5.3' in err.decode('utf-8') or 'PHP 5.4' in res.decode('utf-8') or 'PHP 5.4' in err.decode('utf-8') or 'PHP 5.5' in res.decode('utf-8') or 'PHP 5.5' in err.decode('utf-8')):
-        sublime.message_dialog('Warning.\nPHP 5.6 or newer is required.\nPlease, upgrade your local PHP installation.')
+        s = debugEnvironment(php_bin, formatter_path)
+        sublime.message_dialog('Warning.\nPHP 5.6 or newer is required.\nPlease, upgrade your local PHP installation.\nDebug information:'+s)
         return False
 
     if debug:
@@ -1170,21 +1171,21 @@ if version == 3:
     sublime.save_settings('phpfmt.sublime-settings')
 
 
-def selfupdate():
-    s = sublime.load_settings('phpfmt.sublime-settings')
-    php_bin = s.get("php_bin", "php")
-    formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
+# def selfupdate():
+#     s = sublime.load_settings('phpfmt.sublime-settings')
+#     php_bin = s.get("php_bin", "php")
+#     formatter_path = os.path.join(dirname(realpath(sublime.packages_path())), "Packages", "phpfmt", "fmt.phar")
 
-    print("Selfupdate")
-    cmd_update = [php_bin, formatter_path, '--selfupdate']
-    if os.name == 'nt':
-        startupinfo = subprocess.STARTUPINFO()
-        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-        p = subprocess.Popen(cmd_update, shell=False, startupinfo=startupinfo)
-    else:
-        p = subprocess.Popen(cmd_update, shell=False)
+#     print("Selfupdate")
+#     cmd_update = [php_bin, formatter_path, '--selfupdate']
+#     if os.name == 'nt':
+#         startupinfo = subprocess.STARTUPINFO()
+#         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+#         p = subprocess.Popen(cmd_update, shell=False, startupinfo=startupinfo)
+#     else:
+#         p = subprocess.Popen(cmd_update, shell=False)
 
-sublime.set_timeout(selfupdate, 3000)
+# sublime.set_timeout(selfupdate, 3000)
 
 
 def _ct_poller():

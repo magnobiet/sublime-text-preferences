@@ -1,4 +1,6 @@
-# [php.fmt](https://github.com/phpfmt/php.tools) support for Sublime Text 2/3
+# [phpfmt](https://github.com/phpfmt/fmt) support for Sublime Text 2/3
+
+***[This project follows a Code of Conduct.](https://github.com/phpfmt/code-of-conduct)***
 
 ### Installation
 
@@ -204,7 +206,7 @@ $d = new D();
 
 ### Troubleshooting
 - Be sure you can run PHP from the command line.
-- If you need support, please open an issue at [php.tools issues](https://github.com/phpfmt/php.tools/issues)
+- If you need support, please open an issue at [fmt issues](https://github.com/phpfmt/fmt/issues)
 
 ### The Most FAQ
 
