@@ -19,7 +19,7 @@ Install `Autoprefixer` with [Package Control](https://sublime.wbond.net) and res
 Make sure it's in your $PATH by running `node -v` in your command-line.  
 On OS X you need to make sure it's in `/usr/local/bin` or symlink it there.
 
-See the Autoprefixer version in use [here](https://github.com/sindresorhus/sublime-autoprefixer/blob/master/node_modules/autoprefixer-core/package.json#L3).
+See the Autoprefixer version in use [here](https://github.com/sindresorhus/sublime-autoprefixer/blob/master/node_modules/autoprefixer/package.json#L3).
 
 
 ## Getting started
@@ -40,7 +40,8 @@ See the [supported browser names](https://github.com/ai/autoprefixer#browsers).
 
 ```json
 {
-	"browsers": ["last 2 versions"]
+	"browsers": ["last 2 versions"],
+	"prefixOnSave": false
 }
 ```
 
