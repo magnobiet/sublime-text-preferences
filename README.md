@@ -6,7 +6,7 @@
 You'll love the slick user interface, extraordinary features and amazing performance.
 
 * [Official website](http://www.sublimetext.com/3)
-* [Package Control](https://sublime.wbond.net/)
+* [Package Control](https://packagecontrol.io/)
 
 ## Install
 
@@ -25,12 +25,15 @@ npm run install
 
 ```bash
 cd $HOME/Downloads
-wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
+wget -c http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
 dpkg -i sublime-text_build-*.deb
+
 cd $HOME/.config/
+mv sublime-text-3 sublime-text-3-BKP
 git clone git@github.com:magnobiet/sublime-text.git sublime-text-3
+
 cd sublime-text-3
-npm run install
+npm run install # as super user
 ```
 
 ## Installed Packages
@@ -71,6 +74,7 @@ npm run install
 * JsFormat
 * Laravel 5 Artisan
 * Laravel 5 Snippets
+* Laravel Blade Highlighter
 * ~~LESS~~
 * Line Endings Unify
 * LineEndings
@@ -79,9 +83,11 @@ npm run install
 * ~~Nettuts+ Fetch~~
 * nginx
 * Package Control
+* PHP Companion
 * PHP Getters and Setters
 * phpfmt
 * PlainTasks
+* Reindent on save
 * Sass
 * SassBeautify
 * SCSS
@@ -91,7 +97,7 @@ npm run install
 * StringEncode
 * SublimeCodeIntel
 * SublimeLinter
-* SublimeLinter-coffee
+* ~~SublimeLinter-coffee~~
 * SublimeLinter-contrib-scss-lint
 * SublimeLinter-csslint
 * SublimeLinter-jscs
