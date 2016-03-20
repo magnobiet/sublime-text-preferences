@@ -45,16 +45,12 @@ Prefer using the toggle options at command palette. However you might find yours
  *  phpfmt: toggle additional transformations
  *  phpfmt: toggle excluded transformations
  *  phpfmt: toggle skip execution when .php.tools.ini is missing
- *  phpfmt: toggle auto align
  *  phpfmt: toggle autocomplete
  *  phpfmt: toggle dependency autoimport
  *  phpfmt: toggle format on save
  *  phpfmt: toggle PSR1 - Class and Methods names
  *  phpfmt: toggle PSR1
  *  phpfmt: toggle PSR2
- *  phpfmt: toggle smart linebreak after open curly
- *  phpfmt: toggle visibility order
- *  phpfmt: toggle yoda mode
  *  phpfmt: analyse this
  *  phpfmt: build autocomplete database
  *  phpfmt: getter and setter (camelCase)
@@ -67,18 +63,20 @@ Prefer using the toggle options at command palette. However you might find yours
  *  phpfmt: toggle PHP 5.5 compatibility mode
  *  phpfmt: enable/disable additional transformations
  *  phpfmt: troubleshoot information
+ *  phpfmt: update PHP binary path
 
 
 ### Currently Supported Transformations:
 
  * AddMissingParentheses             Add extra parentheses in new instantiations.
  * AliasToMaster                     Replace function aliases to their masters - only basic syntax alias.
+ * AlignConstVisibilityEquals        Vertically align "=" of visibility and const blocks.
  * AlignDoubleArrow                  Vertically align T_DOUBLE_ARROW (=>).
  * AlignDoubleSlashComments          Vertically align "//" comments.
  * AlignEquals                       Vertically align "=".
  * AlignGroupDoubleArrow             Vertically align T_DOUBLE_ARROW (=>) by line groups.
  * AlignPHPCode                      Align PHP code within HTML block.
- * AlignTypehint                     Vertically align "//" comments.
+ * AlignTypehint                     Vertically align function type hints.
  * AllmanStyleBraces                 Transform all curly braces into Allman-style.
  * AutoPreincrement                  Automatically convert postincrement to preincrement.
  * AutoSemicolon                     Add semicolons in statements ends.
@@ -95,6 +93,7 @@ Prefer using the toggle options at command palette. However you might find yours
  * LeftWordWrap                      Word wrap at 80 columns - left justify.
  * LongArray                         Convert short to long arrays.
  * MergeElseIf                       Merge if with else.
+ * SplitElseIf                       Merge if with else.
  * MergeNamespaceWithOpenTag         Ensure there is no more than one linebreak before namespace
  * MildAutoPreincrement              Automatically convert postincrement to preincrement. (Deprecated pass. Use AutoPreincrement instead).
  * OrganizeClass                     Organize class, interface and trait structure.

@@ -40,7 +40,7 @@ For more portability you can use `todolist.txt` either as a filename or as suffi
 
 `--` and then <kbd>tab</kbd> will give you this: `--- ✄ -----------------------`
 
-☐ Completion rules (<kbd>ctrl+space</kbd> to see list of them):  
+☐ Completion rules (<kbd>ctrl+space</kbd> or <kbd>alt+/</kbd> to see list of them):  
 
 - type `t`, press <kbd>tab</kbd> — it’ll become `@today` — this one is highlighted differently than other tags;
 - `c`, <kbd>tab</kbd> — `@critical`;
@@ -48,7 +48,7 @@ For more portability you can use `todolist.txt` either as a filename or as suffi
 - `l`, <kbd>tab</kbd> — `@low`;
 - `s`, <kbd>tab</kbd> — `@started` — press <kbd>tab</kbd> again and current date will be inserted, when you’ll complete or cancel a task with such tag, you’ll know how many time has passed since start;
 - `tg`, <kbd>tab</kbd>, <kbd>tab</kbd> work in the same manner as `s`, but inserts `@toggle(current date)` — so you can pause and resume to get more correct result when done/cancel; each toggle tag is either pause or resume depending on its place in sequence;
-- `cr`, <kbd>tab</kbd>, <kbd>tab</kbd> — `@created(current date)`;
+- `cr`, <kbd>tab</kbd>, <kbd>tab</kbd> — `@created(current date)` (<kbd>⌘ + shift + enter</kbd> creates a new task with this tag);
 - `d`, <kbd>tab</kbd> — `@due( )`  
   If you press <kbd>tab</kbd> again, it’ll insert current date, same for `@due( 0)`.  
   You can type short date (similar to [OrgMode’s date prompt](http://orgmode.org/manual/The-date_002ftime-prompt.html), but not the same) and then press <kbd>tab</kbd> to expand it into default format.  
@@ -125,6 +125,7 @@ For more portability you can use `todolist.txt` either as a filename or as suffi
   In SublimeText 3 you can specify a symbol inside that file by using \> character like: `.\filename>symbol`.  
   In SublimeText 2 you can specify a text inside that file by using inch characters like: `.\filename"any text"`.  
   Pressing <kbd>ctrl + o</kbd> (<kbd>alt + o</kbd> on Windows/Linux) will open the file in Sublime and scroll to specific position if any.  
+  Also in SublimeText 3 link may point to directory, open such link will add the directory to current project (sidebar).  
   In addition, Markdown and “wiki” (Org-Mode, NV, etc.) styles are supported as well, examples:
 
 ```
