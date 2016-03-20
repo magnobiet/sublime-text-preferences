@@ -3,7 +3,9 @@
 /Packages/PyV8
 /Packages/User/Color Highlighter/icons
 /Backup/
+/Cache/
 *.cache
 *.last-run
 *.sublime_session
 BufferScroll.bin.gz
+node_modules/
