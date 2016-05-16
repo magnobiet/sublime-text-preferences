@@ -1,1 +1,1 @@
-{"description": "Convert selected text into banners made up of ASCII art.", "url": "https://github.com/viisual/ASCII-Decorator", "version": "2014.06.17.17.09.34"}
+{"dependencies": [], "version": "2016.04.29.01.14.33", "description": "Convert selected text into banners made up of ASCII art.", "platforms": ["*"], "url": "https://github.com/viisual/ASCII-Decorator", "sublime_text": "*"}

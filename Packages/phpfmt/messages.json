@@ -29,5 +29,8 @@
     "6.2.0": "messages/6.2.0.txt",
     "9.3.0": "messages/9.3.0.txt",
     "9.13.0": "messages/9.3.0.txt",
-    "11.0.0": "messages/11.0.0.txt"
+    "11.0.0": "messages/11.0.0.txt",
+    "12.0.0": "messages/12.0.0.txt",
+    "12.1.0": "messages/12.1.0.txt",
+    "12.2.0": "messages/12.2.0.txt"
 }

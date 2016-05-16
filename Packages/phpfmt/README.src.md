@@ -1,4 +1,4 @@
-# [phpfmt](https://github.com/phpfmt/fmt) support for Sublime Text 2/3
+# [phpfmt](https://github.com/phpfmt/fmt) support for Sublime Text 3
 
 ***[This project follows a Code of Conduct.](https://github.com/phpfmt/code-of-conduct)***
 
@@ -7,9 +7,7 @@
 #### Requirements
 - **You must have a running copy of PHP on the machine you are running Sublime Text**
 
-Plugin runs with PHP 5.6 or newer installed in the machine running the plugin.
-
-There is a backwards compatible mode with PHP 5.5 - however not all improvements will be available in this mode.
+Plugin runs with PHP 7.0 or newer installed in the machine running the plugin.
 
 #### Install this plugin through Package Manager.
 
@@ -17,17 +15,16 @@ There is a backwards compatible mode with PHP 5.5 - however not all improvements
 - Choose `Package Control: Install Package`
 - Choose `phpfmt`
 
-#### Configuration (Windows)
-
-- Edit configuration file (`%AppData%\Sublime Text\Packages\phpfmt\phpfmt.sublime-settings`)
-- For field `"php_bin"` enter the path to the php.exe
-  Example: `"php_bin":"c:/PHP/php.exe"`
-
 #### Configuration (OS X and Linux)
 
 - Edit configuration file (`phpfmt.sublime-settings`)
 - For field `"php_bin"` enter the path to the php
   Example: `"php_bin":"/usr/local/bin/php"`
+
+
+#### Windows Support
+
+[Windows support is offered by phpfmtForWindows package.](https://github.com/phpfmt/sublime-phpfmt-for-windows)
 
 ### Settings
 
@@ -210,10 +207,10 @@ $d = new D();
 
 ### The Most FAQ
 
-***I want to use sublime-phpfmt, but it needs PHP 5.6 or newer and on my production
+***I want to use sublime-phpfmt, but it needs PHP 7.0 or newer and on my production
 server I have PHP 5.5 or older. What should I do?***
 
-Consider installing a standalone PHP 5.6 in a separate directory and have it *not*
+Consider installing a standalone PHP 7.0 in a separate directory and have it *not*
 configured in the environment. Within the plugin, ensure `php_bin` parameter is pointed to this standalone installation.
 
 ### Acknowledgements

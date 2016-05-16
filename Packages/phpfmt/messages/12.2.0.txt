@@ -1,0 +1,14 @@
+# sublime-phpfmt for Windows - call to arms
+
+On and off I receive GH issues about Window users with problems running this
+plugin. Personally, I always work with Unix systems, and I cannot help people
+on a platform, that essentially, I don't have access to.
+
+So I am going to fork sublime-phpfmt into a different ST package, specifically
+targeted to Window users.
+
+In order to this to work for everyone, I need that Windows Pythonists to step
+up and take over this fork. Please, contact me through github issues pages if
+you are interested in this task.
+
+This fork will happen in 04/21.

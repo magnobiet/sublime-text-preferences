@@ -22,7 +22,6 @@
     {"caption": "phpfmt: generate PHPDoc block", "command": "generate_phpdoc"},
     {"caption": "phpfmt: look for .php.tools.ini", "command": "toggle", "args": {"option":"readini"}},
     {"caption": "phpfmt: reorganize content of class", "command": "order_method"},
-    {"caption": "phpfmt: refactor", "command": "refactor"},
 
     {"caption": "phpfmt: enable/disable additional transformations", "command": "toggle_pass_menu" },
     {"caption": "phpfmt: troubleshoot information", "command": "debug_env"},
