@@ -12,7 +12,7 @@ You'll love the slick user interface, extraordinary features and amazing perform
 
 ### Windows
 
-- Download [installer](http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203083%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
+- Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
 - Open **PowerShell** by right-clicking and selecting **Run as Administrator**
 
 ```powershell
@@ -24,13 +24,13 @@ npm run install
 ### Linux Ubuntu (and Derivatives)
 
 ```bash
-cd $HOME/Downloads
-wget -c http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
-dpkg -i sublime-text_build-*.deb
+cd ~/Downloads
+wget -c https://download.sublimetext.com/sublime-text_build-3114_amd64.deb # as super user
+dpkg -i sublime-text*.deb
 
-cd $HOME/.config/
+cd ~/.config/
 mv sublime-text-3 sublime-text-3-BKP
-git clone git@github.com:magnobiet/sublime-text.git sublime-text-3
+git clone https://github.com/magnobiet/sublime-text.git sublime-text-3
 
 cd sublime-text-3
 npm run install # as super user
