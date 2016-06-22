@@ -22,6 +22,9 @@
   { "keys": ["ctrl+shift+r"],     "command": "reveal_in_side_bar" },
   { "keys": ["ctrl+shift+c"],     "command": "show_panel",     "args": { "panel": "console", "toggle": true } },
   { "keys": ["alt+down"],         "command": "move",           "args": { "by": "stops", "empty_line": true, "forward": true } },
-  { "keys": ["alt+up"],           "command": "move",           "args": { "by": "stops", "empty_line": true, "forward": false } }
+  { "keys": ["alt+up"],           "command": "move",           "args": { "by": "stops", "empty_line": true, "forward": false } },
+
+  /*! change workspace */
+  { "keys": ["ctrl+alt+p"],       "command": "prompt_select_workspace" }
 
 ]
