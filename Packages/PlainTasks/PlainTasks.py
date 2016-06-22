@@ -775,6 +775,14 @@ class PlainTasksReplaceShortDate(PlainTasksBase):
             return date
 
 
+class PlainTasksRemoveBold(sublime_plugin.TextCommand):
+    def run(self, edit):
+        for s in reversed(list(self.view.sel())):
+            a, b = s.begin(), s.end()
+            for r in sublime.Region(b + 2, b), sublime.Region(a - 2, a):
+                self.view.erase(edit, r)
+
+
 class PlainTasksStatsStatus(sublime_plugin.EventListener):
     def on_activated(self, view):
         if not view.score_selector(0, "text.todo") > 0:
@@ -820,7 +828,7 @@ class PlainTasksStatsStatus(sublime_plugin.EventListener):
         factor   = int(round(percent/10)) if percent<90 else int(percent/10)
 
         barfull  = view.settings().get('bar_full', u'■')
-        barempty = view.settings().get('bar_empty', u'☐')
+        barempty = view.settings().get('bar_empty', u'□')
         progress = '%s%s' % (barfull*factor, barempty*(10-factor)) if factor else ''
 
         tasks_dates = []
@@ -946,3 +954,26 @@ class PlainTasksArchiveOrgCommand(PlainTasksBase):
             region = sublime.Region(line.a, region.b)
 
         return region
+
+
+def pt_mouse(view, args):
+    if view.score_selector(0, "text.todo") > 0:
+        cursor = view.sel()[0].a
+        # cursor = user click on left side of bullet, -1 = right side
+        if any('bullet' in view.scope_name(r) for r in [cursor, cursor - 1]):
+            view.run_command('plain_tasks_complete')
+    else:
+        system_command = args["command"] if "command" in args else None
+        if system_command:
+            system_args = dict({"event": args["event"]}.items())
+            system_args.update(dict(args["args"].items()))
+            view.run_command(system_command, system_args)
+
+if not ST2:
+    class PlainTasksClickCommand(sublime_plugin.TextCommand):
+        def run_(self, view, args):
+            pt_mouse(self.view, args)
+else:
+    class PlainTasksClickCommand(sublime_plugin.TextCommand):
+        def run_(self, args):
+            pt_mouse(self.view, args)

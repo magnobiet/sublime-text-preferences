@@ -20,7 +20,7 @@ For more portability you can use `todolist.txt` either as a filename or as suffi
 
 ☐ <kbd>⌘ + enter</kbd> or <kbd>⌘ + i</kbd>: new task
 
-☐ <kbd>⌘ + d</kbd>: toggle task as completed.
+☐ <kbd>⌘ + d</kbd> or click bullet: toggle task as completed.
 
 ☐ <kbd>ctrl + c</kbd>: toggle task as cancelled on Mac. <kbd>alt + c</kbd> on Windows/Linux.
 
@@ -246,8 +246,8 @@ Bring up the command palette and type `Tasks: Copy Statistics`.
 }
 ```
 
-## [Introduction to PlainTasks Screencast](https://tutsplus.com/lesson/pretty-task-management/)
-[![](http://i46.tinypic.com/9ggbd3.png)](https://tutsplus.com/lesson/pretty-task-management/)
+## Introduction to PlainTasks Screencast
+[![](http://i46.tinypic.com/9ggbd3.png)](https://www.youtube.com/watch?v=LsfGhjRVJwk)
 
 ## PlainTasks for other editors
 NOTE: These are separate projects, maintained by some awesome developers other than us.
