@@ -37,80 +37,71 @@ npm run install # as super user
 ```
 
 ## Installed Packages
-* AlignTab
-* AngularJS
-* AngularJS Snippets
-* ApacheConf.tmLanguage
-* ASCII Decorator
-* AutoFileName
-* Autoprefixer
-* ~~Better CoffeeScript~~
-* Bootstrap 3 Snippets
-* Bower
-* BracketHighlighter
-* BufferScroll
-* CakePHP (tmbundle)
-* Can I Use
-* cdnjs
-* CodeIgniter Snippets
-* Color Highlighter
-* CSScomb
-* DocBlockr
-* Dotfiles Syntax Highlighting
-* EditorConfig
-* Emmet
-* FileSystem Autocompletion
-* Git
-* GitGutter
-* Grunt
-* Handlebars
-* Highlight
-* HTML Compressor
-* HTML5
-* Jade
-* JavaScript Console
-* JavaScript Patterns
-* JavaScript Snippets
-* JsFormat
-* Laravel 5 Artisan
-* Laravel 5 Snippets
-* Laravel Blade Highlighter
-* ~~LESS~~
-* Line Endings Unify
-* LineEndings
-* List stylesheet variables
-* Markdown Preview
-* ~~Nettuts+ Fetch~~
-* nginx
-* Package Control
-* PHP Companion
-* PHP Getters and Setters
-* phpfmt
-* PlainTasks
-* Reindent on save
-* Sass
-* SassBeautify
-* SCSS
-* SideBarEnhancements
-* Silex Snippets
-* SqlBeautifier
-* StringEncode
-* SublimeCodeIntel
-* SublimeLinter
-* ~~SublimeLinter-coffee~~
-* SublimeLinter-contrib-scss-lint
-* SublimeLinter-csslint
-* SublimeLinter-jscs
-* SublimeLinter-jshint
-* SublimeLinter-json
-* SublimeLinter-php
-* SublimeLinter-phplint
-* SublimeLinter-pylint
-* SublimeLinter-xmllint
-* TrailingSpaces
-* Trimmer
-* ~~Vagrant~~
-* YUI Compressor
+
+- AlignTab
+- AngularJS
+- AngularJS Snippets
+- ApacheConf.tmLanguage
+- ASCII Decorator
+- AutoFileName
+- Bootstrap 3 Snippets
+- Bower
+- BracketHighlighter
+- BufferScroll
+- cdnjs
+- CodeIgniter Snippets
+- Color Highlighter
+- CSScomb
+- DocBlockr
+- Dotfiles Syntax Highlighting
+- EditorConfig
+- Emmet
+- FileSystem Autocompletion
+- Git
+- GitGutter
+- Grunt
+- Handlebars
+- Highlight
+- HTML5
+- JavaScript Console
+- JavaScript Patterns
+- JavaScript Snippets
+- JsFormat
+- Laravel 5 Artisan
+- Laravel 5 Snippets
+- Laravel Blade Highlighter
+- ~~LESS~~
+- Line Endings Unify
+- LineEndings
+- List stylesheet variables
+- Markdown Preview
+- nginx
+- Package Control
+- ~~PHP Companion~~
+- PHP Getters and Setters
+- phpfmt
+- PlainTasks
+- Reindent on save
+- Sass
+- SassBeautify
+- SCSS
+- SideBarEnhancements
+- Silex Snippets
+- SqlBeautifier
+- StringEncode
+- SublimeCodeIntel
+- SublimeLinter
+- SublimeLinter-contrib-scss-lint
+- SublimeLinter-csslint
+- SublimeLinter-jscs
+- SublimeLinter-jshint
+- SublimeLinter-json
+- SublimeLinter-php
+- SublimeLinter-phplint
+- SublimeLinter-pylint
+- SublimeLinter-xmllint
+- TrailingSpaces
+- Trimmer
 
 ## Icon
 
