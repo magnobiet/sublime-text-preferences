@@ -8,6 +8,8 @@ You'll love the slick user interface, extraordinary features and amazing perform
 * [Official website](http://www.sublimetext.com/3)
 * [Package Control](https://packagecontrol.io/)
 
+[![Sublime Text 3][shield-sublime]][sublime]
+
 ## Install
 
 ### Windows
