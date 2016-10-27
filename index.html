@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Sublime Text 3 Packages by magnobiet</title>
+    <title>Sublime Text Preferences by magnobiet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,22 +11,21 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Sublime Text 3 Packages</h1>
-      <h2 class="project-tagline">My Sublime Text packages and configurations</h2>
-      <a href="https://github.com/magnobiet/sublime-text" class="btn">View on GitHub</a>
-      <a href="https://github.com/magnobiet/sublime-text/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/magnobiet/sublime-text/tarball/master" class="btn">Download .tar.gz</a>
+      <h1 class="project-name">Sublime Text Preferences</h1>
+      <h2 class="project-tagline">My Sublime Text 3 preferences</h2>
+      <a href="https://github.com/magnobiet/sublime-text-preferences" class="btn">View on GitHub</a>
+      <a href="https://github.com/magnobiet/sublime-text-preferences/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/magnobiet/sublime-text-preferences/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
-<a id="sublime-text-3-packages" class="anchor" href="#sublime-text-3-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sublime Text 3 Packages</h1>
+<a id="sublime-text-3" class="anchor" href="#sublime-text-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sublime Text 3</h1>
 
 <blockquote>
 <p>The text editor you'll fall in love with</p>
 
-<p>Sublime Text is a sophisticated text editor for code, markup and prose.
-You'll love the slick user interface, extraordinary features and amazing performance.</p>
+<p>Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.</p>
 </blockquote>
 
 <ul>
@@ -35,124 +34,70 @@ You'll love the slick user interface, extraordinary features and amazing perform
 </ul>
 
 <h2>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
 
 <h3>
-<a id="windows" class="anchor" href="#windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows</h3>
+<a id="sublime-text" class="anchor" href="#sublime-text" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sublime Text</h3>
+
+<h4>
+<a id="windows" class="anchor" href="#windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows</h4>
 
 <ul>
-<li>Download <a href="http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203083%20x64%20Setup.exe">installer</a> and run (check <strong>Add to explorer context menu</strong>)</li>
-<li>Open <strong>PowerShell</strong> by right-clicking and selecting <strong>Run as Administrator</strong>
+<li>Download <a href="https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe">installer</a> and run (check <strong>Add to explorer context menu</strong>)</li>
+</ul>
+
+<h4>
+<a id="linux-ubuntu-and-derivatives" class="anchor" href="#linux-ubuntu-and-derivatives" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Linux Ubuntu (and Derivatives)</h4>
+
+<div class="highlight highlight-source-shell"><pre>wget -c https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
+sudo dpkg -i sublime-text<span class="pl-k">*</span>.deb</pre></div>
+
+<h3>
+<a id="package-control" class="anchor" href="#package-control" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Package Control</h3>
+
+<p>Follow <a href="https://packagecontrol.io/installation">this</a> instructions and close Sublime Text after installation</p>
+
+<h3>
+<a id="my-preferences" class="anchor" href="#my-preferences" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My Preferences</h3>
+
+<h4>
+<a id="windows-1" class="anchor" href="#windows-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows</h4>
+
+<ul>
+<li>Open <strong>Command Prompt</strong> by right-clicking and selecting <strong>Run as Administrator</strong>
 </li>
 </ul>
 
-<div class="highlight highlight-source-powershell"><pre>cd <span class="pl-s">"C:\Program Files\Sublime Text 3\"</span>
-git clone https:<span class="pl-k">//</span>github.com<span class="pl-k">/</span>magnobiet<span class="pl-k">/</span>sublime<span class="pl-k">-</span>text.git <span class="pl-k">Data</span>
+<div class="highlight highlight-source-powershell"><pre>cd <span class="pl-s">"%appdata%/Sublime Text 3/Packages/"</span>
+move User User<span class="pl-k">-</span>BKP
+git clone https:<span class="pl-k">//</span>github.com<span class="pl-k">/</span>magnobiet<span class="pl-k">/</span>sublime<span class="pl-k">-</span>text<span class="pl-k">-</span>preferences.git User
+cd User
 npm run install</pre></div>
 
-<h3>
-<a id="linux-ubuntu-and-derivatives" class="anchor" href="#linux-ubuntu-and-derivatives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux Ubuntu (and Derivatives)</h3>
+<h4>
+<a id="linux-ubuntu-and-derivatives-1" class="anchor" href="#linux-ubuntu-and-derivatives-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Linux Ubuntu (and Derivatives)</h4>
 
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> <span class="pl-smi">$HOME</span>/Downloads
-wget -c http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
-dpkg -i sublime-text_build-<span class="pl-k">*</span>.deb
-
-<span class="pl-c1">cd</span> <span class="pl-smi">$HOME</span>/.config/
-mv sublime-text-3 sublime-text-3-BKP
-git clone git@github.com:magnobiet/sublime-text.git sublime-text-3
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> <span class="pl-k">~</span>/.config/sublime-text-3/
+mv User User-BKP
+git clone https://github.com/magnobiet/sublime-text-preferences.git User
 
 <span class="pl-c1">cd</span> sublime-text-3
-npm run install <span class="pl-c"># as super user</span></pre></div>
+sudo npm run install</pre></div>
 
 <h2>
-<a id="installed-packages" class="anchor" href="#installed-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installed Packages</h2>
+<a id="installed-packages" class="anchor" href="#installed-packages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installed Packages</h2>
 
-<ul>
-<li>AlignTab</li>
-<li>AngularJS</li>
-<li>AngularJS Snippets</li>
-<li>ApacheConf.tmLanguage</li>
-<li>ASCII Decorator</li>
-<li>AutoFileName</li>
-<li>Autoprefixer</li>
-<li><del>Better CoffeeScript</del></li>
-<li>Bootstrap 3 Snippets</li>
-<li>Bower</li>
-<li>BracketHighlighter</li>
-<li>BufferScroll</li>
-<li>CakePHP (tmbundle)</li>
-<li>Can I Use</li>
-<li>cdnjs</li>
-<li>CodeIgniter Snippets</li>
-<li>Color Highlighter</li>
-<li>CSScomb</li>
-<li>DocBlockr</li>
-<li>Dotfiles Syntax Highlighting</li>
-<li>EditorConfig</li>
-<li>Emmet</li>
-<li>FileSystem Autocompletion</li>
-<li>Git</li>
-<li>GitGutter</li>
-<li>Grunt</li>
-<li>Handlebars</li>
-<li>Highlight</li>
-<li>HTML Compressor</li>
-<li>HTML5</li>
-<li>Jade</li>
-<li>JavaScript Console</li>
-<li>JavaScript Patterns</li>
-<li>JavaScript Snippets</li>
-<li>JsFormat</li>
-<li>Laravel 5 Artisan</li>
-<li>Laravel 5 Snippets</li>
-<li>Laravel Blade Highlighter</li>
-<li><del>LESS</del></li>
-<li>Line Endings Unify</li>
-<li>LineEndings</li>
-<li>List stylesheet variables</li>
-<li>Markdown Preview</li>
-<li><del>Nettuts+ Fetch</del></li>
-<li>nginx</li>
-<li>Package Control</li>
-<li>PHP Companion</li>
-<li>PHP Getters and Setters</li>
-<li>phpfmt</li>
-<li>PlainTasks</li>
-<li>Reindent on save</li>
-<li>Sass</li>
-<li>SassBeautify</li>
-<li>SCSS</li>
-<li>SideBarEnhancements</li>
-<li>Silex Snippets</li>
-<li>SqlBeautifier</li>
-<li>StringEncode</li>
-<li>SublimeCodeIntel</li>
-<li>SublimeLinter</li>
-<li><del>SublimeLinter-coffee</del></li>
-<li>SublimeLinter-contrib-scss-lint</li>
-<li>SublimeLinter-csslint</li>
-<li>SublimeLinter-jscs</li>
-<li>SublimeLinter-jshint</li>
-<li>SublimeLinter-json</li>
-<li>SublimeLinter-php</li>
-<li>SublimeLinter-phplint</li>
-<li>SublimeLinter-pylint</li>
-<li>SublimeLinter-xmllint</li>
-<li>TrailingSpaces</li>
-<li>Trimmer</li>
-<li><del>Vagrant</del></li>
-<li>YUI Compressor</li>
-</ul>
+<p><a href="Package%20Control.sublime-settings#L6">Package Control.sublime-settings</a></p>
 
 <h2>
-<a id="icon" class="anchor" href="#icon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Icon</h2>
+<a id="icon" class="anchor" href="#icon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Icon</h2>
 
 <p><img src="https://raw.githubusercontent.com/magnobiet/sublime-text/master/Icons/sublime-text.png" alt="Sublime Text Icon"></p>
 
 <p>by <a href="https://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon">Jon-Paul Lunney</a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/magnobiet/sublime-text">Sublime Text 3 Packages</a> is maintained by <a href="https://github.com/magnobiet">magnobiet</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/magnobiet/sublime-text-preferences">Sublime Text Preferences</a> is maintained by <a href="https://github.com/magnobiet">magnobiet</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
