@@ -1,14 +1,14 @@
 {
-  "name": "st3_plugins_dependencies",
-  "description": "Install Sublime Text 3 plugins dependencies",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": {
-    "name": "Magno Biét",
-    "email": "me@magnobiet.com",
-    "url": "http://magnobiet.com/"
-  },
-  "scripts": {
-    "install": "npm install -g jshint jscs csslint && sudo apt-get install libxml2-utils"
-  }
+	"name": "st3_preferences",
+	"description": "Sublime Text 3 Preferences",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": {
+		"name": "Magno Biét",
+		"email": "magno.biet@gmail.com",
+		"url": "http://magnobiet.com/"
+	},
+	"scripts": {
+		"install": "npm install -g jshint jscs csslint && sudo apt-get install libxml2-utils"
+	}
 }

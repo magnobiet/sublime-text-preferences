@@ -2,106 +2,58 @@
 
 > The text editor you'll fall in love with
 
-> Sublime Text is a sophisticated text editor for code, markup and prose.
-You'll love the slick user interface, extraordinary features and amazing performance.
+> Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
 
 * [Official website](http://www.sublimetext.com/3)
 * [Package Control](https://packagecontrol.io/)
 
 ## Install
 
-### Windows
+### Sublime Text
 
-- Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
-- Open **PowerShell** by right-clicking and selecting **Run as Administrator**
+#### Windows
+
+- Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
+
+#### Linux Ubuntu (and Derivatives)
+
+```bash
+wget -c https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
+sudo dpkg -i sublime-text*.deb
+```
+
+### Package Control
+
+Follow [this](https://packagecontrol.io/installation) instructions and close Sublime Text after installation
+
+### My Preferences
+
+#### Windows
+
+- Open **Command Prompt** by right-clicking and selecting **Run as Administrator**
 
 ```powershell
-cd "C:\Program Files\Sublime Text 3\"
-git clone https://github.com/magnobiet/sublime-text.git Data
+cd "%appdata%/Sublime Text 3/Packages/"
+move User User-BKP
+git clone https://github.com/magnobiet/sublime-text-preferences.git User
+cd User
 npm run install
 ```
 
-### Linux Ubuntu (and Derivatives)
+#### Linux Ubuntu (and Derivatives)
 
 ```bash
-cd ~/Downloads
-wget -c https://download.sublimetext.com/sublime-text_build-3114_amd64.deb # as super user
-dpkg -i sublime-text*.deb
-
-cd ~/.config/
-mv sublime-text-3 sublime-text-3-BKP
-git clone https://github.com/magnobiet/sublime-text.git sublime-text-3
+cd ~/.config/sublime-text-3/
+mv User User-BKP
+git clone https://github.com/magnobiet/sublime-text-preferences.git User
 
 cd sublime-text-3
-npm run install # as super user
+sudo npm run install
 ```
 
 ## Installed Packages
 
-- AlignTab
-- AngularJS
-- AngularJS Snippets
-- ApacheConf.tmLanguage
-- ASCII Decorator
-- AutoFileName
-- Bootstrap 3 Snippets
-- Bower
-- BracketHighlighter
-- BufferScroll
-- cdnjs
-- CodeIgniter Snippets
-- Color Highlighter
-- CSScomb
-- DocBlockr
-- Dotfiles Syntax Highlighting
-- EditorConfig
-- Emmet
-- FileSystem Autocompletion
-- Git
-- GitGutter
-- Grunt
-- Handlebars
-- Highlight
-- HTML5
-- JavaScript Console
-- JavaScript Patterns
-- JavaScript Snippets
-- JsFormat
-- Laravel 5 Artisan
-- Laravel 5 Snippets
-- Laravel Blade Highlighter
-- ~~LESS~~
-- Line Endings Unify
-- LineEndings
-- List stylesheet variables
-- Markdown Preview
-- nginx
-- Package Control
-- ~~PHP Companion~~
-- PHP Getters and Setters
-- phpfmt
-- PlainTasks
-- Reindent on save
-- Sass
-- SassBeautify
-- SCSS
-- SideBarEnhancements
-- Silex Snippets
-- SqlBeautifier
-- StringEncode
-- SublimeCodeIntel
-- SublimeLinter
-- SublimeLinter-contrib-scss-lint
-- SublimeLinter-csslint
-- SublimeLinter-jscs
-- SublimeLinter-jshint
-- SublimeLinter-json
-- SublimeLinter-php
-- SublimeLinter-phplint
-- SublimeLinter-pylint
-- SublimeLinter-xmllint
-- TrailingSpaces
-- Trimmer
+[Package Control.sublime-settings](Package Control.sublime-settings#L6)
 
 ## Icon
 
