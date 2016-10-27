@@ -53,7 +53,7 @@ sudo npm run install
 
 ## Installed Packages
 
-[Package Control.sublime-settings](Package Control.sublime-settings#L6)
+[Package Control.sublime-settings](https://github.com/magnobiet/sublime-text-preferences/blob/master/Package%20Control.sublime-settings#L6)
 
 ## Icon
 
