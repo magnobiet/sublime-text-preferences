@@ -1,0 +1,10 @@
+{
+	"extensions":
+	[
+		"webapp",
+		".jsbeautifyrc",
+		".jshintrc",
+		".htmlhintrc",
+		".csslintrc"
+	]
+}
