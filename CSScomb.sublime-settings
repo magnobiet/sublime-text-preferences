@@ -1,0 +1,9 @@
+{
+	"config": {
+		"block-indent": "	",
+		"leading-zero": true,
+		"space-after-opening-brace": "\n",
+		"space-before-closing-brace": "\n",
+		"vendor-prefix-align": false
+	}
+}
