@@ -1,0 +1,6 @@
+{
+	"indent": "t",
+	"beautifyOnSave": true,
+	"inlineComments": false,
+	"newlineBetweenSelectors": true
+}
