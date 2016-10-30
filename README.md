@@ -24,7 +24,7 @@ sudo dpkg -i sublime-text*.deb
 
 ### Package Control
 
-Follow [this](https://packagecontrol.io/installation) instructions and close Sublime Text after installation
+Follow [this](https://packagecontrol.io/installation#Simple) instructions and close Sublime Text after installation
 
 ### My Preferences
 
@@ -43,7 +43,7 @@ npm run install
 #### Linux Ubuntu (and Derivatives)
 
 ```bash
-cd ~/.config/sublime-text-3/
+cd ~/.config/sublime-text-3/Packages/
 mv User User-BKP
 git clone https://github.com/magnobiet/sublime-text-preferences.git User
 
