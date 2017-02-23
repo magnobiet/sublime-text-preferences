@@ -13,7 +13,7 @@
 
 #### Windows
 
-- Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
+Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
 
 #### Linux Ubuntu (and Derivatives)
 
@@ -30,7 +30,7 @@ Follow [this](https://packagecontrol.io/installation#Simple) instructions and cl
 
 #### Windows
 
-- Open **Command Prompt** by right-clicking and selecting **Run as Administrator**
+Open **Command Prompt** by right-clicking and selecting **Run as Administrator**
 
 ```powershell
 cd "%appdata%/Sublime Text 3/Packages/"
