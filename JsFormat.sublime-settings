@@ -1,4 +1,7 @@
 {
+	"indent_with_tabs": true,
+	"preserve_newlines": true,
+	"max_preserve_newlines": 2,
 	"format_on_save": true,
 	"jsbeautifyrc_files": true,
 	"ignore_sublime_settings": false
