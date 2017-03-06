@@ -5,6 +5,8 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
+		"Alignment",
 		"AlignTab",
 		"AngularJS",
 		"AngularJS Snippets",
@@ -33,6 +35,7 @@
 		"JavaScript Snippets",
 		"JsFormat",
 		"LESS",
+		"Liquid",
 		"List stylesheet variables",
 		"Markdown Preview",
 		"nginx",
@@ -58,6 +61,7 @@
 		"SublimeLinter-pylint",
 		"SublimeLinter-xmllint",
 		"TrailingSpaces",
-		"Trimmer"
+		"Trimmer",
+		"Twig"
 	]
 }

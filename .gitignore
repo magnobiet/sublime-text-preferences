@@ -9,3 +9,5 @@ Package Control.ca-certs/
 Color Highlighter/
 SublimeLinter/
 *.crt
+*.cache
+*.bak
