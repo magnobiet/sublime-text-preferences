@@ -1,0 +1,8 @@
+{
+	"parser": "github",
+	"enable_uml": true,
+	"enable_highlight": true,
+	"github_mode": "markdown",
+	"github_inject_header_ids": true,
+	"github_oauth_token": "S&CRET"
+}
