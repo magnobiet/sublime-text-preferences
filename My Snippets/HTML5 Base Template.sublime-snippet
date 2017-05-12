@@ -1,0 +1,78 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE html>
+<html lang="${1:pt-BR}">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>${2}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="">
+		<meta name="application-name" content="">
+		<meta name="theme-color" content="#000000">
+
+		${3:<link rel="amphtml" href="/amp/">}
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+
+	</head>
+
+	<body>
+
+		<header role="banner">
+
+				<h1>${2}</h1>
+
+		</header>
+
+		<main role="main">
+
+			<section>
+
+				<article>
+
+					<header role="heading">
+
+					</header>
+
+					<p>
+						${4}
+					</p>
+
+					<footer role="complementary">
+
+					</footer>
+
+				</article>
+
+			</section>
+
+			<aside role="complementary">
+
+			</aside>
+
+		</main>
+
+		<footer role="contentinfo">
+
+		</footer>
+
+	</body>
+</html>
+
+]]></content>
+	<tabTrigger>h5bs</tabTrigger>
+	<description>HTML5 Base Structure</description>
+</snippet>

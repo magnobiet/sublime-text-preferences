@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+function dd(\$data, \$die = true) {
+
+	echo '<pre>' . print_r(\$data) . '</pre>';
+
+	if (\$die) {
+		die();
+	}
+
+}
+${1}
+]]></content>
+	<tabTrigger>dd</tabTrigger>
+	<description>PHP Dump and Die</description>
+</snippet>
