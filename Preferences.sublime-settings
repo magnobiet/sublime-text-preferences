@@ -18,6 +18,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"SublimeLinter-jshint",
 		"Vintage"
 	],
 	"index_exclude_patterns":

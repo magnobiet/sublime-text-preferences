@@ -9,6 +9,6 @@
 		"url": "http://magnobiet.com/"
 	},
 	"scripts": {
-		"install": "npm install -g jshint jscs csslint && gem install scss_lint && sudo apt-get install libxml2-utils"
+		"install": "npm install -g jshint eslint csslint && gem install scss_lint && sudo apt-get install libxml2-utils"
 	}
 }
