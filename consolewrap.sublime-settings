@@ -1,0 +1,9 @@
+{
+    "js": {
+        "consoleStr"   : "{title}, {variable}",
+        "consoleFunc"  : ["console", "log"],
+        "single_quotes": true,
+        "semicolon"    : true,
+        "log_types"    : ["log", "info", "warn", "error", "debug", "table"]
+    }
+}
