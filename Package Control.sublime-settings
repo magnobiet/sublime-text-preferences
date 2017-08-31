@@ -66,9 +66,9 @@
 		"SublimeLinter-phplint",
 		"SublimeLinter-pylint",
 		"SublimeLinter-xmllint",
-		"tern_for_sublime",
 		"TrailingSpaces",
 		"Trimmer",
-		"Vuejs Complete Package"
+		"Vuejs Complete Package",
+		"WakaTime"
 	]
 }

@@ -11,3 +11,4 @@ SublimeLinter/
 *.crt
 *.cache
 *.bak
+WakaTime.sublime-settings
