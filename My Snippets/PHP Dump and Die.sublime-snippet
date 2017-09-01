@@ -13,4 +13,5 @@ ${1}
 ]]></content>
 	<tabTrigger>dd</tabTrigger>
 	<description>PHP Dump and Die</description>
+	<scope>source.php</scope>
 </snippet>
