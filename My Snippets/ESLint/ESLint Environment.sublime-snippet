@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/* eslint-env ${1:node, mocha} */
+
+]]></content>
+	<tabTrigger>esle</tabTrigger>
+	<description>ESLint Environment</description>
+	<scope>source.js</scope>
+</snippet>

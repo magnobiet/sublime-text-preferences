@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/* eslint-enable ${1:no-alert, no-console} */
+
+]]></content>
+	<tabTrigger>esle</tabTrigger>
+	<description>ESLint Enable</description>
+	<scope>source.js</scope>
+</snippet>

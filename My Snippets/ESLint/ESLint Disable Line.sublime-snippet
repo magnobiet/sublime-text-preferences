@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+// eslint-disable-line ${1:rule}
+]]></content>
+	<tabTrigger>esldn</tabTrigger>
+	<description>ESLint Disable Line</description>
+	<scope>source.js</scope>
+</snippet>

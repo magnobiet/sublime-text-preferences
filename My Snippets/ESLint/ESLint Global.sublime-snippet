@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/* global ${1:var1:false, var2:false} */
+
+]]></content>
+	<tabTrigger>eslg</tabTrigger>
+	<description>ESLint Global</description>
+	<scope>source.js</scope>
+</snippet>

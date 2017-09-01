@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/* eslint ${1:quotes: ["error", "double"], curly: 2} */
+
+]]></content>
+	<tabTrigger>eslr</tabTrigger>
+	<description>ESLint Rules</description>
+	<scope>source.js</scope>
+</snippet>

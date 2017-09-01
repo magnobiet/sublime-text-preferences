@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/* eslint-disable ${1:no-alert, no-console} */
+
+]]></content>
+	<tabTrigger>esld</tabTrigger>
+	<description>ESLint Disable</description>
+	<scope>source.js</scope>
+</snippet>
