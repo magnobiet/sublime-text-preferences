@@ -1,11 +1,10 @@
-# Sublime Text 3
+# [Sublime Text 3](http://www.sublimetext.com/3)
 
 > The text editor you'll fall in love with
 
 > Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
 
-* [Official website](http://www.sublimetext.com/3)
-* [Package Control](https://packagecontrol.io/)
+![Sublime Text](https://c758482.ssl.cf2.rackcdn.com/new_theme_large.png)
 
 ## Install
 
@@ -22,7 +21,7 @@ wget -c https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
 sudo dpkg -i sublime-text*.deb
 ```
 
-### Package Control
+### [Package Control](https://packagecontrol.io/)
 
 Follow [this](https://packagecontrol.io/installation#Simple) instructions and close Sublime Text after installation
 
@@ -60,3 +59,7 @@ sudo npm run install
 ![Sublime Text Icon](https://raw.githubusercontent.com/magnobiet/sublime-text/master/Icons/sublime-text.png)
 
 by [Jon-Paul Lunney](https://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon)
+
+## Licence
+
+This project is licensed under the [MIT License](https://magno.mit-license.org/2014). Copyright © Magno Biét
