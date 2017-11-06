@@ -1,5 +1,6 @@
 {
 	"bold_folder_labels": true,
+	"copy_with_empty_selection": false,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": false,
