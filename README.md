@@ -12,18 +12,21 @@
 
 #### Windows
 
-Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
+Download [`.exe` installer](https://www.sublimetext.com/3) and run (check **Add to explorer context menu**).
 
 #### Linux Ubuntu (and Derivatives)
 
 ```bash
-wget -c https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
-sudo dpkg -i sublime-text*.deb
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
 ```
 
 ### [Package Control](https://packagecontrol.io/)
 
-Follow [this](https://packagecontrol.io/installation#Simple) instructions and close Sublime Text after installation
+Follow [this](https://packagecontrol.io/installation#Simple) instructions and close Sublime Text after installation.
 
 ### My Preferences
 
@@ -52,13 +55,7 @@ sudo npm run install
 
 ## Installed Packages
 
-[Package Control.sublime-settings](https://github.com/magnobiet/sublime-text-preferences/blob/master/Package%20Control.sublime-settings#L6)
-
-## Icon
-
-![Sublime Text Icon](https://raw.githubusercontent.com/magnobiet/sublime-text/master/Icons/sublime-text.png)
-
-by [Jon-Paul Lunney](https://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon)
+See [Package Control.sublime-settings#L6](Package%20Control.sublime-settings#L6)
 
 ## Licence
 
