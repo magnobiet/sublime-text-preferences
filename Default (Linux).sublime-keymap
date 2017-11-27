@@ -1,5 +1,9 @@
 [
 
+	/*! Paste replacement */
+	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
+	{ "keys": ["ctrl+shift+v"], "command": "paste" },
+
 	/*! upper/lowercase */
 	{ "keys": ["ctrl+l"], "command": "lower_case" },
 	{ "keys": ["ctrl+u"], "command": "upper_case" },

@@ -1,5 +1,9 @@
 [
 
+	/*! Paste replacement */
+	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
+	{ "keys": ["ctrl+shift+v"], "command": "paste" },
+
 	/*! upper/lowercase */
 	{ "keys": ["ctrl+l"], "command": "lower_case" },
 	{ "keys": ["ctrl+u"], "command": "upper_case" },
@@ -23,8 +27,5 @@
 	{ "keys": ["ctrl+shift+c"],     "command": "show_panel",     "args": { "panel": "console", "toggle": true } },
 	{ "keys": ["alt+down"],         "command": "move",           "args": { "by": "stops", "empty_line": true, "forward": true } },
 	{ "keys": ["alt+up"],           "command": "move",           "args": { "by": "stops", "empty_line": true, "forward": false } },
-
-	/*! change workspace */
-	{ "keys": ["ctrl+alt+p"],       "command": "prompt_select_workspace" }
 
 ]
