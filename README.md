@@ -38,7 +38,7 @@ Open **Command Prompt** by right-clicking and selecting **Run as Administrator**
 cd "%appdata%/Sublime Text 3/Packages/"
 move User User-BKP
 git clone https://github.com/magnobiet/sublime-text-preferences.git User
-cd User
+cd User/
 npm run install
 ```
 
@@ -49,8 +49,19 @@ cd ~/.config/sublime-text-3/Packages/
 mv User User-BKP
 git clone https://github.com/magnobiet/sublime-text-preferences.git User
 
-cd sublime-text-3
+cd User/
 sudo npm run install
+```
+
+#### macOS
+
+```bash
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+mv User User-BKP
+git clone https://github.com/magnobiet/sublime-text-preferences.git User
+
+cd User/
+npm run install
 ```
 
 ## Installed Packages
