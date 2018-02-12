@@ -47,6 +47,7 @@
 	"show_line_endings": true,
 	"spell_check": false,
 	"tab_size": 4,
+	"theme": "Adaptive.sublime-theme",
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
