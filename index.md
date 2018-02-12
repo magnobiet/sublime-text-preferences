@@ -2,7 +2,7 @@
 
 > Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
 
-[![Sublime Text 3 Screen Shot](screenshot.png)](http://www.sublimetext.com/3)
+[![Sublime Text 3 Screen Shot](https://github.com/magnobiet/sublime-text-preferences/raw/master/screenshot.png)](http://www.sublimetext.com/3)
 
 ## Install
 
