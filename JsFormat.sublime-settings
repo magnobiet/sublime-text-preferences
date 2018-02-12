@@ -4,5 +4,6 @@
 	"max_preserve_newlines": 2,
 	"format_on_save": true,
 	"jsbeautifyrc_files": true,
-	"ignore_sublime_settings": false
+	"ignore_sublime_settings": false,
+	"format_on_save_extensions": ["js", "mjs", "json"]
 }
