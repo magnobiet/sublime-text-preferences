@@ -1,62 +1,49 @@
 # Sublime Text 3
 
-> The text editor you'll fall in love with
-
 > Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
 
-* [Official website](http://www.sublimetext.com/3)
-* [Package Control](https://packagecontrol.io/)
+[![Sublime Text 3 Screen Shot](screenshot.png)](http://www.sublimetext.com/3)
 
 ## Install
 
-### Sublime Text
+### macOS
 
-#### Windows
+Download [`.dmg` installer](https://www.sublimetext.com/3) or using Homebrew `brew cask install sublime-text`
 
-- Download [installer](https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe) and run (check **Add to explorer context menu**)
+### Linux
 
-#### Linux Ubuntu (and Derivatives)
+Follow the [instructions](https://www.sublimetext.com/docs/3/linux_repositories.html) for your distribution.
 
-```bash
-wget -c https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
-sudo dpkg -i sublime-text*.deb
-```
+### Windows
 
-### Package Control
+Download [`.exe` installer](https://www.sublimetext.com/3).
 
-Follow [this](https://packagecontrol.io/installation) instructions and close Sublime Text after installation
+## Package Control
 
-### My Preferences
+Follow [this](https://packagecontrol.io/installation#Simple) instructions (close Sublime Text after installation).
 
-#### Windows
+## My Preferences
 
-- Open **Command Prompt** by right-clicking and selecting **Run as Administrator**
+### Dependencies
 
-```powershell
-cd "%appdata%/Sublime Text 3/Packages/"
-move User User-BKP
-git clone https://github.com/magnobiet/sublime-text-preferences.git User
-cd User
-npm run install
-```
+- Node.js (`npm install --global jshint eslint csslint lebab`)
+- Ruby (`gem install scss_lint`)
 
-#### Linux Ubuntu (and Derivatives)
+### Install
 
-```bash
-cd ~/.config/sublime-text-3/
-mv User User-BKP
-git clone https://github.com/magnobiet/sublime-text-preferences.git User
+- Navigate to `Packages` folder
+  - macOS `cd ~/Library/Application Support/Sublime Text 3/Packages/`
+  - Linux `cd ~/.config/sublime-text-3/Packages/`
+  - Windows `cd "%appdata%/Sublime Text 3/Packages/"`
+- Remove `User` folder
+  - macOS and Linux `rm -rf User/`
+  - Windows `rmdir User/`
+- Clone this repository `git clone --recusive https://github.com/magnobiet/sublime-text-preferences.git User`
 
-cd sublime-text-3
-sudo npm run install
-```
+### Installed Packages
 
-## Installed Packages
+See [Package Control.sublime-settings#L6](Package%20Control.sublime-settings#L6)
 
-[Package Control.sublime-settings](https://github.com/magnobiet/sublime-text-preferences/blob/master/Package%20Control.sublime-settings#L6)
+## Licence
 
-## Icon
-
-![Sublime Text Icon](https://raw.githubusercontent.com/magnobiet/sublime-text/master/Icons/sublime-text.png)
-
-by [Jon-Paul Lunney](https://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon)
+This project is licensed under the [MIT License](https://magno.mit-license.org/2014). Copyright © Magno Biét
