@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"A File Icon",
 		"Alignment",
 		"AlignTab",
 		"AngularJS",
@@ -24,6 +23,7 @@
 		"Dotfiles Syntax Highlighting",
 		"EditorConfig",
 		"Emmet",
+		"FileIcons",
 		"FileSystem Autocompletion",
 		"GenerateUUID",
 		"Git",
