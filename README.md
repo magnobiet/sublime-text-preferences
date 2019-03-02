@@ -32,13 +32,13 @@ Follow [this](https://packagecontrol.io/installation#Simple) instructions (close
 ### Install
 
 - Navigate to `Packages` folder
-  - macOS `cd ~/Library/Application Support/Sublime Text 3/Packages/`
+  - macOS `cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
   - Linux `cd ~/.config/sublime-text-3/Packages/`
   - Windows `cd "%appdata%/Sublime Text 3/Packages/"`
 - Remove `User` folder
   - macOS and Linux `rm -rf User/`
   - Windows `rmdir User/`
-- Clone this repository `git clone --recusive https://github.com/magnobiet/sublime-text-preferences.git User`
+- Clone this repository `git clone https://github.com/magnobiet/sublime-text-preferences.git User`
 
 ### Installed Packages
 
